@@ -1,8 +1,8 @@
 ---
-title: Victor Soh Cheng Ying
+title: Upconverter
 parent: Individual Contributions
 nav_order: 2
-permalink: /victor-soh/
+permalink: /upconverter/
 
 ---
 
