@@ -299,7 +299,7 @@ Our `gps_reader.py` script works by continuously reading the GNSS data streamed 
 
 **Live\_with\_gps.py** \[output\]
 
-**\[INSERT THE LIVE VIDEO HERE\]**
+![Video](Assets/final video-40s.mp4)
 
 This is a live demo of the script `live_with_gps.py` being executed. The ground station automatically reads the current GPS coordinates and heading of the system, computes the real-time position of TELEOS-2 using its latest retrieved TLE data, and continuously updates the required Azimuth and Elevation angles. 
 
