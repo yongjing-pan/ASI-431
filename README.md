@@ -1,4 +1,4 @@
-# ASI-407: Galassia-5 Ku band radio and ground station Subteam Interim Report
+# ASI-431: Galassia-5 Ku band radio and ground station Subteam Interim Report
 
 This repository hosts  the Interim report for the Galassia-5 Ku band radio and ground station Subteam.
 
