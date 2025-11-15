@@ -1,7 +1,7 @@
 ---
 title: Upconverter
 parent: Work Area
-nav_order: 2
+nav_order: 6
 permalink: /upconverter/
 
 ---
@@ -14,7 +14,7 @@ permalink: /upconverter/
 
 
 
-# **2\. Ku Band Upconverter** {#2.-ku-band-upconverter}
+# **6\. Ku Band Upconverter** {#2.-ku-band-upconverter}
 
 ## **Component Introduction and Principals** {#component-introduction-and-principals}
 
