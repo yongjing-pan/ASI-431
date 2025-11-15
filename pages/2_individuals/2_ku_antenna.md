@@ -16,21 +16,21 @@ has_toc: false
 
 [**Contents page	1**](#contents-page)
 
-[**1\.  Introduction	1**](#1.-introduction)
+[**1\.  Introduction	1**](#1--introduction)
 
-[1.2  Problem Statement	1](#1.2-problem-statement)
+[1.2  Problem Statement	1](#12--problem-statement)
 
-[1.3  Objectives and Scope	2](#1.3-objectives-and-scope)
+[1.3  Objectives and Scope	2](#13--objectives-and-scope)
 
-[1.4 Specifications and Constraints	2](#1.4-specifications-and-constraints)
+[1.4 Specifications and Constraints	2](#14-specifications-and-constraints)
 
-[1.5 Novelty and Contributions	3](#1.5-novelty-and-contributions)
+[1.5 Novelty and Contributions	3](#15-novelty-and-contributions)
 
-[**2\. Background and Literature Review	3**](#2.-background-and-literature-review)
+[**2\. Background and Literature Review	3**](#2-background-and-literature-review)
 
-[2.1 Existing CubeSat Antenna Designs	3](#2.1-existing-cubesat-antenna-designs)
+[2.1 Existing CubeSat Antenna Designs	3](#21-existing-cubesat-antenna-designs)
 
-[**3\. Design Methodology	3**](#3.-design-methodology)
+[**3\. Design Methodology	3**](#3-design-methodology)
 
 [3.1 Key Antenna Performance Metrics	3](#3.1-key-antenna-performance-metrics)
 
@@ -78,11 +78,11 @@ This project focuses on developing a custom space-based Ku-band antenna for the 
 
 As mentioned in the introduction to G5, the team discovered that there is no existing commercial space-qualified Ku-band communication hardware meeting our frequency requirements (13.93-13.99 GHz). The space-based Ku antenna is one crucial part of the system that together with the Ku-band upconverter and ground station, form the custom-designed communication link from the satellite to the ground station. Specifically, the antenna serves to amplify and transmit signals from the satellite to the ground station. Hence, there is a need to develop a custom Ku antenna meeting the G5 mission requirements.
 
-## **1.3  Objectives and Scope** {#1.3-objectives-and-scope}
+## **1.3  Objectives and Scope**  
 
 To design, prototype and test an antenna operating in the required frequency range of 13.93-13.99GHz for space-based application. 
 
-## **1.4 Specifications and Constraints** {#1.4-specifications-and-constraints}
+## **1.4 Specifications and Constraints**  
 
 * Frequency range: 13.95 \+- 0.3 GHz  
 * Maximum size: 100mm x 100mm x 4.26 mm  
@@ -96,21 +96,21 @@ Besides the required frequency range, the other specifications of gain and beamw
 
 Fig. 1: Gomspace S-band antenna ANT2150 mounting configuration. 
 
-## **1.5 Novelty and Contributions** {#1.5-novelty-and-contributions}
+## **1.5 Novelty and Contributions**  
 
 As mentioned in G5’s introduction, existing communication systems do not operate in the narrow and specific frequency range of 13.93-13.99 GHz. The design of a custom Ku antenna to meet our mission’s requirements hence addresses this gap in existing commercially-available space-based Ku-band antennae.
 
-# **2\. Background and Literature Review** {#2.-background-and-literature-review}
+# **2\. Background and Literature Review**  
 
 What is the setting of the problem you are trying to address? Where is your project situated within the bigger scheme of things?:Comprehensive and detailed discussion about the context of the problem using information gathered from an extensive range of relevant, authoritative, and up-to-date sources.
 
-## **2.1 Existing CubeSat Antenna Designs** {#2.1-existing-cubesat-antenna-designs}
+## **2.1 Existing CubeSat Antenna Designs** 
 
 There are many antenna designs used in CubeSats for the Ku, K and Ka bands. One review paper analyses roughly \~12 antenna designs used in recent years \[1\]. Reviewing all of them, only planar antenna types like patch and slot antennae fit our small and flat (thickness \<4.6mm) geometry requirements. Corroborating with existing missions, planar antennas, especially microstrip patches, are widely used in satellite communications due to their compact size, low profile, and ease of integration on CubeSats \[2,3\]. The next section will detail the selection of the antenna design.
 
-# **3\. Design Methodology** {#3.-design-methodology}
+# **3\. Design Methodology**  
 
-## **3.1 Key Antenna Performance Metrics** {#3.1-key-antenna-performance-metrics}
+## **3.1 Key Antenna Performance Metrics** 
 
 Before diving into the antenna design selection, it is important to understand key antenna performance metrics.
 
@@ -128,9 +128,9 @@ Fig. 2: S11 (dB) vs Frequency
 
 **Axial ratio (AR)** measures how circularly polarised the antenna is. A high axial ratio means the beam is elliptically polarized. When AR is very high, the beam is no different from linear polarization. AR \<3dB (2 times) is ideal.
 
-## **3.2 Selection of antenna type**  {#3.2-selection-of-antenna-type}
+## **3.2 Selection of antenna type**  
 
-### **3.2.1 Concept evaluation matrix** {#3.2.1-concept-evaluation-matrix}
+### **3.2.1 Concept evaluation matrix**  
 
 In various CubeSat antennae review papers, the most common types of planar antennae were patch antennae, followed by slot antennae and metasurface antennae \[1\]. A total of 4 factors were considered for selection of the best design:
 
@@ -155,13 +155,13 @@ In contrast, slot antennae and metasurface antennae are less commonly used in sp
 
 Thus, **patch antenna** is still preferred as it scores highest across availability of design formulae, circular polarisation complexity, space heritage, and manufacturability.
 
-### **3.2.2 Mitigating the Disadvantages of Patch Antenna** {#3.2.2-mitigating-the-disadvantages-of-patch-antenna}
+### **3.2.2 Mitigating the Disadvantages of Patch Antenna** 
 
 **Limited Gain**: One patch antenna generally has small gain, but this can be mitigated as at high frequencies such as Ku-band, individual patch elements are small, enabling high-gain arrays without excessive footprint.
 
 **Narrowband:** Patch antennas are narrowband due to their resonant nature. However, our mission’s bandwidth requirement is already narrow (e.g., ±0.03 GHz), thus this limitation is not critical.
 
-### **3.2.3 About the Patch Antenna** {#3.2.3-about-the-patch-antenna}
+### **3.2.3 About the Patch Antenna** 
 
 The patch antenna consists of a conducting patch layered on top of a dielectric substrate, which is on top of a conductive ground plane. Through a feedline, alternating E fields are formed between the patch and ground plane, which resonate and escape through both ends of the patch antenna which act as radiating slots. For a circular polarized patch antenna, the basic operating principle in which the E fields escape from the gaps between the patch and the ground plane is the same, but the geometry and feed points are changed to create circular polarisation.
 
@@ -169,7 +169,7 @@ The patch antenna consists of a conducting patch layered on top of a dielectric 
 
 Fig. 3: Rectangular Patch Antenna \[6\]
 
-### **3.2.4. Preliminary feasibility calculations** {#3.2.4.-preliminary-feasibility-calculations}
+### **3.2.4. Preliminary feasibility calculations** 
 
 Utilising the formula for size of a rectangular patch antenna estimates that a singular Ku element would be of the size 7mm x 5.2mm \[7\]. One patch element can achieve around \~3-4dBi. 
 
@@ -182,7 +182,7 @@ To reach \>10dBi, we can double the element 3 times.
 
 With a half wavelength (\~10.8mm) between each element, and considering a 2x4 array, the patches will only take up \~37mm by 18mm. \~0.3 wavelength extension on every side adds \~7mm of ground plane which gives 44mm by 21mm. Considering the required separation from metal, this is at least 6mm (half wavelength) from the mounting screws (Fig XX). Hence a microstrip patch array is a viable solution given our specifications.
 
-## **3.3 Selection of type of patch antenna** {#3.3-selection-of-type-of-patch-antenna}
+## **3.3 Selection of type of patch antenna**  
 
 | ![][image3] | ![][image4] | ![][image5] |
 | :---- | :---- | :---- |
@@ -199,7 +199,7 @@ Table 2: Selection of patch antenna design
 
 Among the three designs considered, the truncated square patch was eliminated early due to its inherently lower gain \[8\], as highlighted by DSO mentors and supporting literature. The dual-feed rectangular patch can achieve good circular polarisation, but it requires a more complex feed structure per patch involving a Wilkinson power divider \[9\] and precise phase balancing. In contrast, the circular probe-fed patch achieves RHCP using a single feed to each patch, offering lower complexity while maintaining high gain and strong space heritage. This design is also supported by my NUS mentor. Therefore, the circular probe-fed patch antenna was selected.
 
-## **3.4 Antenna Design Software** {#3.4-antenna-design-software}
+## **3.4 Antenna Design Software** 
 
 Ansys HFSS is the primary software used due to the availability of tutorials online and the familiarity of my DSO mentor with it. CST Design Suite was also used initially as, unlike HFSS, it contains inbuilt formulae to calculate parameters of the circular patch array.
 
@@ -209,7 +209,7 @@ Ansys HFSS is the primary software used due to the availability of tutorials onl
 
 The prototypes discussed here are all antenna simulations in HFSS. Tests of key metrics mentioned prior are done after each simulation to evaluate the antenna performance. The key metrics are S11, Realized RHCP Gain, Beamwidth and Axial Ratio. Test results are discussed as well as steps for further improvement.
 
-## **4.1 Prototype 1: Single Patch Simulation** {#4.1-prototype-1:-single-patch-simulation}
+## **4.1 Prototype 1: Single Patch Simulation** 
 
 ![][image6]![][image7]  
 Fig. 5: a) Single patch in simulation, b) Circular patch parameters calculated by CST
@@ -230,7 +230,7 @@ The antenna is left-hand-circular polarisation (LHCP) dominated instead of RHCP.
 
 The gain is also unusually high for a single patch. It was later discovered that this was due to an error in the meshing frequency as it was not set at 13.95 GHz.
 
-## **4.2 Prototype 2: 2x2 Array Simulation** {#4.2-prototype-2:-2x2-array-simulation}
+## **4.2 Prototype 2: 2x2 Array Simulation**  
 
 ![][image11]
 
@@ -250,7 +250,7 @@ Axial ratio decreased from 5.6 to 1.8dB which is now acceptable. Compared to pro
 
 As mentioned, the gain is still too high and it was due to the meshing error.
 
-## **4.3 Prototype 3: Optimising single patch** {#4.3-prototype-3:-optimising-single-patch}
+## **4.3 Prototype 3: Optimising single patch** 
 
 The main point of this prototype is to optimize the S11 for a single element. This helps create a good foundation for the overall S11 as there will be power reflections later on when the feed network is created for multiple patches. Also, the feedpoint is mirrored to produce RHCP instead of LHCP.  
 ![][image15]Fig. 13: S11  
@@ -262,7 +262,7 @@ The gain is now more reasonable at 4.5 dBi, and RHCP has been achieved
 
 A very high axial ratio of 14 dB is observed. However, it is theorised that putting the single patch into an array will minimise it, as seen earlier.
 
-## **4.4 Prototype 4: Optimising 2x2 array** {#4.4-prototype-4:-optimising-2x2-array}
+## **4.4 Prototype 4: Optimising 2x2 array**  
 
 ![][image18]  
 Fig. 14: 2x2 Array (Optimised)
