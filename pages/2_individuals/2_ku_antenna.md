@@ -393,36 +393,35 @@ N. Richa, M. M. Sharma, I. B. Sharma, None Jaiverdhan, Priya Kaith, and J. Garg,
 
 **Acknowledgements**  
 I would like to thank my DSO mentor Ms Huang Ying Ying and my NUS supervisor Mr Chua Tai Wei, both with extensive knowledge on antenna design, whose guidance without which I would not have been able to complete my design tasks this semester. I would also like to thank my NUS supervisor Mr Eugene Ee and Mr Ng Zhen Ning from Nuspace for the practical and valuable advice they have offered that help in the realisation of this project. 
+[image1]: {{ site.baseurl }}/Assets/images/fig/1.png
+[image2]: {{ site.baseurl }}/Assets/images/fig/2.png
+[image3]: {{ site.baseurl }}/Assets/images/fig/3.png
+[image4]: {{ site.baseurl }}/Assets/images/fig/4.png
+[image5]: {{ site.baseurl }}/Assets/images/fig/5.png
+[image6]: {{ site.baseurl }}/Assets/images/fig/6.png
+[image7]: {{ site.baseurl }}/Assets/images/fig/7.png
+[image8]: {{ site.baseurl }}/Assets/images/fig/8.png
+[image9]: {{ site.baseurl }}/Assets/images/fig/9.png
+[image10]: {{ site.baseurl }}/Assets/images/fig/10.png
 
-[image1]: /Assets/images/fig/1.png
-[image2]: /Assets/images/fig/2.png
-[image3]: /Assets/images/fig/3.png
-[image4]: /Assets/images/fig/4.png
-[image5]: /Assets/images/fig/5.png
-[image6]: /Assets/images/fig/6.png
-[image7]: /Assets/images/fig/7.png
-[image8]: /Assets/images/fig/8.png
-[image9]: /Assets/images/fig/9.png
-[image10]: /Assets/images/fig/10.png
+[image11]: {{ site.baseurl }}/Assets/images/fig/11.png
+[image12]: {{ site.baseurl }}/Assets/images/fig/12.png
+[image13]: {{ site.baseurl }}/Assets/images/fig/13.png
+[image14]: {{ site.baseurl }}/Assets/images/fig/14.png
+[image15]: {{ site.baseurl }}/Assets/images/fig/15.png
+[image16]: {{ site.baseurl }}/Assets/images/fig/16.png
+[image17]: {{ site.baseurl }}/Assets/images/fig/17.png
+[image18]: {{ site.baseurl }}/Assets/images/fig/18.png
+[image19]: {{ site.baseurl }}/Assets/images/fig/19.png
+[image20]: {{ site.baseurl }}/Assets/images/fig/20.png
 
-[image11]: /Assets/images/fig/11.png
-[image12]: /Assets/images/fig/12.png
-[image13]: /Assets/images/fig/13.png
-[image14]: /Assets/images/fig/14.png
-[image15]: /Assets/images/fig/15.png
-[image16]: /Assets/images/fig/16.png
-[image17]: /Assets/images/fig/17.png
-[image18]: /Assets/images/fig/18.png
-[image19]: /Assets/images/fig/19.png
-[image20]: /Assets/images/fig/20.png
-
-[image21]: /Assets/images/fig/21.png
-[image22]: /Assets/images/fig/22.png
-[image23]: /Assets/images/fig/23.png
-[image24]: /Assets/images/fig/24.png
-[image25]: /Assets/images/fig/25.png
-[image26]: /Assets/images/fig/26.png
-[image27]: /Assets/images/fig/27.png
-[image28]: /Assets/images/fig/28.png
-[image29]: /Assets/images/fig/29.png
-[image30]: /Assets/images/fig/30.png
+[image21]: {{ site.baseurl }}/Assets/images/fig/21.png
+[image22]: {{ site.baseurl }}/Assets/images/fig/22.png
+[image23]: {{ site.baseurl }}/Assets/images/fig/23.png
+[image24]: {{ site.baseurl }}/Assets/images/fig/24.png
+[image25]: {{ site.baseurl }}/Assets/images/fig/25.png
+[image26]: {{ site.baseurl }}/Assets/images/fig/26.png
+[image27]: {{ site.baseurl }}/Assets/images/fig/27.png
+[image28]: {{ site.baseurl }}/Assets/images/fig/28.png
+[image29]: {{ site.baseurl }}/Assets/images/fig/29.png
+[image30]: {{ site.baseurl }}/Assets/images/fig/30.png
