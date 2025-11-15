@@ -1,9 +1,9 @@
 title: ASI-431 Interim Report 
 description: This is the Interim Report for the ASI-431 Galassia-5 Ku Patch Antenna for CDE4301 (AY 2025/2026).
 theme: just-the-docs
-baseurl: "/cde4301-interim-report"
+baseurl: "/ASI-431"
 url: "https://yongjing-pan.github.io"
-repository: /ASI-431
+repository: /yongjing-pan/ASI-431
 
 color_scheme: light
 
@@ -21,7 +21,7 @@ defaults:
 # Aux links for the upper right navigation
 aux_links:
   "GitHub Repo":
-    - "//github.com/ASI-431"
+    - "//github.com/yongjing-pan/ASI-431"
     
 
 # Makes Aux links open in a new tab. Default is false
