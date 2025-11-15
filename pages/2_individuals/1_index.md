@@ -1,7 +1,7 @@
 ---
 title: Work Area
 nav_order: 2
-permalink: /individuals/
+permalink: /WorkArea/
 has_toc: false
 ---
 
@@ -10,15 +10,19 @@ has_toc: false
 <div style="margin-top:2em ;display:flex; flex-wrap:wrap; gap:32px">
   <div style="width:200px">
     <a href="{{site.baseurl}}/Upconverter">
-      <h2>Subsystem Architecture</h2>
-
+      <h2>Subsystem Architecture</h2> </a>
+    <a href="{{site.baseurl}}/Upconverter">
   <div style="width:200px">
-      <h2>Upconverter</h2>
-    </a>
+      <h2>Upconverter</h2></a>
   </div>
   <div style="width:200px">
+  <a href="{{site.baseurl}}/Ground_Station">
       <h2>Ground Station</h2>
-      <p>Global Positioning System<br></p>
-      <p>Gimble Control System<br></p>
+  <div style="width:200px"></a>
+  <a href="{{site.baseurl}}/GPS">
+      <p>Global Positioning System<br></p></a>
+  <div style="width:200px">
+  <a href="{{site.baseurl}}/gimble">
+      <p>Gimble Control System<br></p></a>
 
 

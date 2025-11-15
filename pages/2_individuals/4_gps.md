@@ -1,6 +1,6 @@
 ---
 title: Global Positioning System 
-parent: Individual Contributions
+parent: Work Area
 nav_order: 4
 permalink: /GPS/
 ---

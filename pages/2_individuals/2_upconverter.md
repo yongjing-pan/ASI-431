@@ -1,6 +1,6 @@
 ---
 title: Upconverter
-parent: Individual Contributions
+parent: Work Area
 nav_order: 2
 permalink: /upconverter/
 
@@ -13,29 +13,6 @@ permalink: /upconverter/
 </div>
 
 
-START ON THE NEXT PAGE
-
-| Name | JG |
-| :---- | :---- |
-| Chapter No. | 2 |
-| Topic Name | MECH GND SUPPORT EQUIP |
-| Status |  |
-
-[**2\. Ku Band Upconverter	2**](#2.-ku-band-upconverter)
-
-[Component Introduction and Principals	2](#component-introduction-and-principals)
-
-[Component Requirements	2](#component-requirements)
-
-[Upconverter Architecture and Block Diagram	2](#upconverter-architecture-and-block-diagram)
-
-[Upconverter PCB and Design Choices	2](#upconverter-pcb-and-design-choices)
-
-[Upconverter Design Progress	2](#heading)
-
-[Key Challenges and Future Plans	2](#key-challenges-and-future-plans)
-
-# 
 
 # **2\. Ku Band Upconverter** {#2.-ku-band-upconverter}
 

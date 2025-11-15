@@ -1,6 +1,6 @@
 ---
 title: Ground Station
-parent: Individual Contributions
+parent: Work Area
 nav_order: 3
 permalink: /Ground_Station/
 ---

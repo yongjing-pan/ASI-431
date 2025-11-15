@@ -1,6 +1,6 @@
 ---
 title: Gimbal Control System (Software)
-parent: Individual Contributions
+parent: Work Area
 nav_order: 4
 permalink: /gimble/
 ---
