@@ -213,7 +213,7 @@ The prototypes discussed here are all antenna simulations in HFSS. Tests of key 
 
 ## **4.1 Prototype 1: Single Patch Simulation**
 
-![][image6]![][image7]  
+![][image6] ![][image7]  
 Fig. 5: a) Single patch in simulation, b) Circular patch parameters calculated by CST
 
 By inputting frequency and dielectric constant, the diameter of patch Rp, side stub sizes and feed location Sf were calculated using the inbuilt formulae of CST Design Suite. This design was replicated on Ansys HFSS. 
@@ -403,7 +403,6 @@ I would like to thank my DSO mentor Ms Huang Ying Ying and my NUS supervisor Mr 
 [image8]: {{site.baseurl}}/Assets/images/fig/8.png
 [image9]: {{site.baseurl}}/Assets/images/fig/9.png
 [image10]: {{site.baseurl}}/Assets/images/fig/10.png
-
 [image11]: {{site.baseurl}}/Assets/images/fig/11.png
 [image12]: {{site.baseurl}}/Assets/images/fig/12.png
 [image13]: {{site.baseurl}}/Assets/images/fig/13.png
@@ -414,7 +413,6 @@ I would like to thank my DSO mentor Ms Huang Ying Ying and my NUS supervisor Mr 
 [image18]: {{site.baseurl}}/Assets/images/fig/18.png
 [image19]: {{site.baseurl}}/Assets/images/fig/19.png
 [image20]: {{site.baseurl}}/Assets/images/fig/20.png
-
 [image21]: {{site.baseurl}}/Assets/images/fig/21.png
 [image22]: {{site.baseurl}}/Assets/images/fig/22.png
 [image23]: {{site.baseurl}}/Assets/images/fig/23.png
