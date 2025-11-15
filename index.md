@@ -5,7 +5,7 @@ nav_order: 1
 ---
 <img src="assets/images/intro/galassia_logo_final-inverse.png" alt="G5 logo" width="500">
 
-# ASI-407 Galassia 5 Mission Overview <br>(CDE4301 Interim Report)
+# Galassia 5 Mission Overview <br>(CDE4301 Interim Report)
 
   
 **1\. Galassia 5 Mission Overview**
