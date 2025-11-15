@@ -50,6 +50,8 @@ has_toc: false
 
 [3.4 Antenna Design Software	8](#34-antenna-design-software)
 
+[**4\.  Prototype Development & Testing**](#4--prototype-development--testing)
+
 [4.1 Prototype 1: Single Patch Simulation	8](#41-prototype-1-single-patch-simulation)
 
 [4.2 Prototype 2: 2x2 Array Simulation	10](#42-prototype-2-2x2-array-simulation)
@@ -71,6 +73,7 @@ has_toc: false
 [**7. Conclusion	24**](#7-conclusion)
 
 [**8. References	24**](#8-references)
+
 
 # **1\.  Introduction** 
 
@@ -167,7 +170,7 @@ Thus, **patch antenna** is still preferred as it scores highest across availabil
 
 The patch antenna consists of a conducting patch layered on top of a dielectric substrate, which is on top of a conductive ground plane. Through a feedline, alternating E fields are formed between the patch and ground plane, which resonate and escape through both ends of the patch antenna which act as radiating slots. For a circular polarized patch antenna, the basic operating principle in which the E fields escape from the gaps between the patch and the ground plane is the same, but the geometry and feed points are changed to create circular polarisation.
 
- 
+ ![][image3]
 
 Fig. 3: Rectangular Patch Antenna \[6\]
 
@@ -186,9 +189,7 @@ With a half wavelength (\~10.8mm) between each element, and considering a 2x4 ar
 
 ## **3.3 Selection of type of patch antenna**
 
-| ![][image3] | ![][image4] | ![][image5] |
-| :---- | :---- | :---- |
-
+![][image4]  
 Fig. 4: a) Truncated corner patch, b) Dual-feed patch with Wilkinson Power Divider, c) Circular patch
 
 | Antenna Type | Gain | Simplicity of Design | Space Heritage | Total |
@@ -213,24 +214,24 @@ The prototypes discussed here are all antenna simulations in HFSS. Tests of key 
 
 ## **4.1 Prototype 1: Single Patch Simulation**
 
-![][image6] ![][image7]  
+![][image5]  
 Fig. 5: a) Single patch in simulation, b) Circular patch parameters calculated by CST
 
 By inputting frequency and dielectric constant, the diameter of patch Rp, side stub sizes and feed location Sf were calculated using the inbuilt formulae of CST Design Suite. This design was replicated on Ansys HFSS. 
 
-![][image8]
+![][image6]
 
 Fig. 6: S11
 
 The S11 is not tuned to our desired bandwidth of 13.95 \+- 0.03 GHz. Thus, Rp which affects the resonant frequency and Sf which affects the impedance seen at the feedpoint both have to be further tuned.
 
-![][image9]
+![][image7]
 
 Fig. 7: Axial Ratio
 
 The axial ratio is too high at 5 dB.
 
-![][image10]
+![][image8]
 
 Fig. 8: Realised Gain
 
@@ -240,25 +241,25 @@ The gain is also unusually high for a single patch. It was later discovered that
 
 ## **4.2 Prototype 2: 2x2 Array Simulation**
 
-![][image11]
+![][image9]
 
 Fig. 9: 2x2 Array in simulation
 
 The inbuilt formulae of CST had also suggested the separation between patches and the sequential rotation of patches for 2x2 array. Thus, replicating the patch created earlier, I simulated the 2x2 array.
 
-![][image12]
+![][image10]
 
 Fig. 10: S11
 
 The S11 was showing a spike at \~13.5 GHz, which is not acceptable. This was also likely an issue due to the meshing error.
 
-![][image13]
+![][image11]
 
 Fig. 11: Axial Ratio
 
 Axial ratio decreased from 5.6 to 1.8dB which is now acceptable. Compared to prototype 1, this shows that the sequentially rotated array has the effect of **decreasing axial ratio**.
 
-![][image14]
+![][image12]
 
 Fig. 12: Realised Gain
 
@@ -267,73 +268,73 @@ As mentioned, the gain is still too high and it was due to the meshing error.
 ## **4.3 Prototype 3: Optimising single patch**
 
 The main point of this prototype is to optimize the S11 for a single element. This helps create a good foundation for the overall S11 as there will be power reflections later on when the feed network is created for multiple patches. Also, the feedpoint is mirrored to produce RHCP instead of LHCP.  
-![][image15]  
+![][image13]  
 Fig. 13: S11  
 Using parametric sweep, the best Rp and Sf parameters were found to produce a lowest possible S11 minimum of \-51 dB at 13.95 GHz. The optimal parameters were **Rp \= 3.092 mm, Sf \= 0.931mm.** Upon discussion with my DSO mentor, it was revealed that this patch is over-optimised, as it is not necessary to optimise the minimum beyond \-20dB.  
-![][image16]  
+![][image14]  
 Fig. 14: Realised Gain
 
 The gain is now more reasonable at 4.5 dBi, and RHCP has been achieved  
-![][image17]  
+![][image15]  
 Fig. 15: Axial Ratio
 
 A very high axial ratio of 14 dB is observed. However, it is theorised that putting the single patch into an array will minimise it, as seen earlier.
 
 ## **4.4 Prototype 4: Optimising 2x2 array**
 
-![][image18]  
+![][image16]  
 Fig. 16: 2x2 Array (Optimised)
 
 This prototype takes the optimised single patch and forms a 2x2 array with it. The feeds will have to be excited at different phases to account for the physical rotations. From top left, clockwise: 0, 90, 180, 270 deg.  
-![][image19]![][image20]  
+![][image17]  
 Fig. 17: S11 optimisation (before vs after)
 
 With the same Rp and Sf as the optimised patch, the S11 minimum is slightly shifted left of 13.95 GHz. Hence I decreased Rp and tuned Sf slightly to shift the minimum back to 13.95 GHz   
-![][image21]  
+![][image18]  
 Fig. 18: Realised Gain  
 As expected, the gain reaches 10 dB. As the patch is doubled twice, an increase of 6dB from 4dB is expected.
 
-![][image22]
+![][image19]  
 Fig. 19: Axial Ratio  
 Validating our theory, the sequential rotation has the effect of decreasing the axial ratio significantly from 14 to 0.9597 which is acceptable.
 
 ## **4.5 Prototype 5: Repositioning feed points**
 
 Considering the location of the current feed points, possible feed networks were considered. A review of typical feed networks shows that typically, it consists of parts that can be duplicated (Fig. 20). Thus, it was thought that reversing the rotational pattern (Fig. 21\) to create regularly-spaced feed points would simplify the feed network. However, it was later realised that each feed to each feedpoint will need to have a slightly different length (¼ wavelength to account for a 90 degree phase shift), so the regularly-spaced feed points may not be necessary. Nonetheless, it later proved beneficial to investigate the effect of repositioning the feed points.  
-![][image23]  
+![][image20]  
 Fig. 20: Typical feed network  
-![][image24]  
+![][image21]  
 Fig. 21: Reversing rotational pattern (before vs after)
 
-![][image25]  
+![][image22]  
 Fig. 22: S11  
-![][image26]  
+![][image23]  
 Fig. 23: Axial Ratio  
-![][image27]  
+![][image24]  
 Fig. 24: Realised Gain  
 The gain and S11 are similar to prototype 4\. However, the axial ratio actually decreased more from 0.96 to 0.0244 (only 1/5 of the previous) showing that this orientation is **very effective for minimising axial ratio**. 
 
 ## **4.6 Prototype 6: 2x4 Array Simulation**
 
 From prototypes 4 and 5, the 2x2 arrays managed to achieve 10.7 dB and 10.2 dB respectively. This just meets our 10 dBi gain requirements. However, it is better to have a margin of 50% above 10 dB. Thus a safe gain value would be \~11.8 dBi. Hence, it was decided to double the 2x2 array to a 2x4 array, which theoretically increases gain from \~10 to \~13 dBi.  
-![][image28]  
+![][image25]  
 Fig. 23: 2x4 Array  
-![][image29]  
+![][image26]  
 Fig. 26: S11  
-![][image30]  
+![][image27]  
 Fig. 27: Realised Gain  
-![][image31]  
+![][image28]  
 Fig. 28: Axial Ratio  
 The S11 is still \<-20dB within the required range. Now, the radiation pattern is no longer similar from all orientations as the array is rectangular instead of square. The narrowest beamwidth is taken at the Phi=90 deg cut. It still satisfies our HPBW requirements as gain is at \~9dB \> 7dB required at \+- 12 degrees from the peak. Noticeably, the axial ratio has increased from 0.024 to 0.6863. Thanks to prototype 5, the AR is optimally low.
 
 ## **4.7 Prototype 7: Feed network investigation**
 
-![][image32]![][image33]
+![][image29]
 
 Fig. 29: a) Rectangular feed network (typical), b) Sequentially rotated ‘arc’ feed network
 
 A quick prototype was created to investigate the type of feed network suitable to feed all patch elements. Generally, rectangular feed networks (Fig. 29a) are used due to their ease of design. However, for sequentially rotated arrays, a special arc feed network can be utilised (Fig. 29b), offering a simple means to add a fixed length for each phase shift, and minimising total feed length. The more complex arc feed network was investigated to see if it is viable. However, due to HFSS’s limited features for circular arc-creation, this proved cumbersome to create and hence it was rejected.  
-![][image34]
+![][image30]
 
 Fig. 30: Attempt to draw arc feed network in HFSS
 
@@ -393,6 +394,7 @@ N. Richa, M. M. Sharma, I. B. Sharma, None Jaiverdhan, Priya Kaith, and J. Garg,
 
 **Acknowledgements**  
 I would like to thank my DSO mentor Ms Huang Ying Ying and my NUS supervisor Mr Chua Tai Wei, both with extensive knowledge on antenna design, whose guidance without which I would not have been able to complete my design tasks this semester. I would also like to thank my NUS supervisor Mr Eugene Ee and Mr Ng Zhen Ning from Nuspace for the practical and valuable advice they have offered that help in the realisation of this project. 
+
 
 
 [image1]: {{site.baseurl}}/Assets/images/fig/1.png
