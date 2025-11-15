@@ -3,7 +3,7 @@ description: This is the Interim Report for the ASI-431 Galassia-5 Ku Patch Ante
 theme: just-the-docs
 baseurl: "/ASI-431"
 url: "https://yongjing-pan.github.io"
-repository: /yongjing-pan/ASI-431
+repository: yongjing-pan/ASI-431
 
 color_scheme: light
 

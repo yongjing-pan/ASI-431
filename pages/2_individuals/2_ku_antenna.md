@@ -6,7 +6,7 @@ has_toc: false
 ---
   
 <div style="display:flex">
-  <img src="{{site.baseurl}}/assets/images/profiles/yj.png" alt="Pan Yongjing" width="200" style="border-radius:50%">
+  <img src="{{site.baseurl}}/Assets/images/profiles/yj.png" alt="Pan Yongjing" width="200" style="border-radius:50%">
   <div style="margin-left: 20px">
     <h2>Ku Antenna</h2>
   </div>
