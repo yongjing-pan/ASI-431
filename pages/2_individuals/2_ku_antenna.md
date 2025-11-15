@@ -4,14 +4,16 @@ nav_order: 2
 permalink: /ku_antenna/
 has_toc: false
 ---
-  
+
 <div style="display:flex">
   <img src="{{site.baseurl}}/Assets/images/profiles/yj.png" alt="Pan Yongjing" width="200" style="border-radius:50%">
   <div style="margin-left: 20px">
-    <h2>Ku Antenna</h2>
+    <h2>Pan Yongjing</h2>
+    <h3>Year 4 Electrical Engineering</h3>
+    <h3>A0257283X</h3>
   </div>
 </div>
-
+  
 # **Contents page** {#contents-page}
 
 [**Contents page	1**](#contents-page)
