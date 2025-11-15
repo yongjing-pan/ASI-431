@@ -393,6 +393,8 @@ N. Richa, M. M. Sharma, I. B. Sharma, None Jaiverdhan, Priya Kaith, and J. Garg,
 
 **Acknowledgements**  
 I would like to thank my DSO mentor Ms Huang Ying Ying and my NUS supervisor Mr Chua Tai Wei, both with extensive knowledge on antenna design, whose guidance without which I would not have been able to complete my design tasks this semester. I would also like to thank my NUS supervisor Mr Eugene Ee and Mr Ng Zhen Ning from Nuspace for the practical and valuable advice they have offered that help in the realisation of this project. 
+
+
 [image1]: {{site.baseurl}}/Assets/images/fig/1.png
 [image2]: {{site.baseurl}}/Assets/images/fig/2.png
 [image3]: {{site.baseurl}}/Assets/images/fig/3.png
