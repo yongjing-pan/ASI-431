@@ -1,6 +1,6 @@
 ---
 title: Ku Antenna
-nav_order: 1
+nav_order: 2
 permalink: /ku_antenna/
 has_toc: false
 ---
@@ -70,11 +70,11 @@ has_toc: false
 
 [**8\. References	24**](#8.-references)
 
-# **1\.**  **Introduction**  {#1.-introduction}
+# **1\.**  **Introduction**
 
 This project focuses on developing a custom space-based Ku-band antenna for the Galassia 5 (G5)’s unique requirements.
 
-## **1.2  Problem Statement** {#1.2-problem-statement}
+## **1.2  Problem Statement**
 
 As mentioned in the introduction to G5, the team discovered that there is no existing commercial space-qualified Ku-band communication hardware meeting our frequency requirements (13.93-13.99 GHz). The space-based Ku antenna is one crucial part of the system that together with the Ku-band upconverter and ground station, form the custom-designed communication link from the satellite to the ground station. Specifically, the antenna serves to amplify and transmit signals from the satellite to the ground station. Hence, there is a need to develop a custom Ku antenna meeting the G5 mission requirements.
 
