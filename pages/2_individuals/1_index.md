@@ -12,15 +12,18 @@ has_toc: false
     <a href="{{site.baseurl}}/Upconverter">
       <h2>Subsystem Architecture</h2> </a>
     <a href="{{site.baseurl}}/Upconverter">
+    
   <div style="width:200px">
       <h2>Upconverter</h2></a>
-  </div>
+
   <div style="width:200px">
   <a href="{{site.baseurl}}/Ground_Station">
-      <h2>Ground Station</h2>
-  <div style="width:200px"></a>
+      <h2>Ground Station</h2></a>
+
+  <div style="width:200px">
   <a href="{{site.baseurl}}/GPS">
       <p>Global Positioning System<br></p></a>
+
   <div style="width:200px">
   <a href="{{site.baseurl}}/gimble">
       <p>Gimble Control System<br></p></a>
