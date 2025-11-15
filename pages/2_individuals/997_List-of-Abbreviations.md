@@ -4,9 +4,7 @@ nav_order: 997
 permalink: /abbreviations/
 ---
 
-# List of Abbreviations
-
-TO BE UPDATED
+# List of Abbreviations 
 
 | AI | Artificial Intelligence |
 | :---- | :---- |
@@ -15,13 +13,5 @@ TO BE UPDATED
 | **NPU** | Neural Processing Unit |
 | **TVAC** | Thermal Vacuum |
 | **STK** | Systems Tool Kit (software) |
-| **MGSE** | Mechanical Ground Support Equipment |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-| **U** | Unit of measurement for Cubesat (1U \= 100x100x100mm) |
-|  |  |
-|  |  |
-|  |  |
+| **MGSE** | Mechanical Ground Support Equipment |  
+| **U** | Unit of measurement for Cubesat (1U \= 100x100x100mm) | 

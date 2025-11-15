@@ -41,3 +41,13 @@ callouts:
   warning:
     title: Warning
     color: red
+
+
+# --- Add this section ---
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+  syntax_highlighter: rouge
