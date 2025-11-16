@@ -337,8 +337,8 @@ A quick prototype was created to investigate the type of feed network suitable t
 ![][image30]
 
 Fig. 30: Attempt to draw arc feed network in HFSS
-
-# **5\. Current Shortcomings ** 
+ 
+# **5\. Current Shortcomings** 
 
 | Shortcomings | Proposals |
 | :---- | :---- |
