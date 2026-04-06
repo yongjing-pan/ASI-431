@@ -18,7 +18,7 @@ has_toc: false
 
 [**Contents page	2**](#contents-page)
 
-[**1\.  Introduction	2**](?tab=t.0#heading=h.f7kqoiqmraur)
+[**1\.  Introduction	2**](?tab=t.0#heading=h.f7kqoi)
 
 [1.2  Problem Statement	2](?tab=t.0#heading=h.nzljutlr1vse)
 
