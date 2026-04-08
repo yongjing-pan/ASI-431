@@ -14,6 +14,62 @@ has_toc: false
   </div>
 </div>
  
+ Other things i may add
+
+Key things to add
+
+* Pcb1 feed  
+* Tests  
+* Pcb2 plans
+
+* Include analysis **throughout report**   
+* Effect of presence of stubs \+ lit review   
+* Central Plastic screw for mech stability  
+* Tie in mutual coupling when talking abt feed network?  
+  * Mutual Coupling: When grouping multiple patches to form a high-gain array, the close proximity of the elements introduces mutual coupling, which can lower antenna efficiency, cause impedance mismatching, and distort the radiation pattern (Li et al., 2018). This will be mitigated by ensuring adequate electrical spacing between the elements and optimising the feed network.  
+* Improve writing & citation quality w NotebookLM  
+  * Some sections if they look sus  
+* Small(er) stuff  
+  * Pic clarity  
+  * Fig, Table names \+ numberings  
+  * Appendices  
+  * Contents page clickable  
+  * Check all references are accessible   
+* Trivial stuff  
+  *    
+  * 
+
+This report should document the entirety of your work that you have done since the start of your project.
+
+If you are working on a more design-focused project, the following points should be covered in the report:
+
+* Identify the problem of interest and value proposition for your project.  
+* Design specifications that you are required to meet.    
+* Detail design of selected concept solution(s).  
+* Fabrication and testing of prototypes of the selected concept solution(s), as well as design iterations (if any).  
+* Evaluation of whether the intended deliverables of the project have been made, and recommendations for future work. 
+
+If you are working on a more research-focused project, the following points should be covered in the report:
+
+* Identify the research gaps to address.  
+* Hypotheses that you plan to explore and scope of the research.    
+* Research methods/protocols (e.g. number of specimens, experimental procedure, etc.) used.  
+* Collection and analysis of data from tests, as well as test iterations (if any).   
+* Conclusions from the experimental programme and recommendations for future work. 
+
+If your project involves a mix of both design and research elements, you are expected to document the work that is appropriate to these elements depending on the context and scope of your work. 
+
+In a nutshell, at the end of your project you are expected to summarise the key accomplishments of your project which should comprise the following:
+
+* Clear and compelling case about the novelty and/or value of your project.  
+* Detailed, well-articulated, and appropriate steps taken to accomplish the intended deliverables of the project.  
+* Evidence which demonstrates that the intended deliverables of the project have been addressed successfully.
+
+By default, the report should be in the form of a website on GitHub. You are required to submit the URL to the website here. However, if you have been granted permission to submit a normal report instead of an online version on GitHub, you may submit the report here as well. 
+
+If you are working on a group project, only ONE person is required to submit on behalf of the group.  
+
+ 
 
 # **Contents page** {#contents-page}
 
@@ -57,7 +113,7 @@ has_toc: false
 
 [4.1 Prototype 1: Optimising single patch	11](#4.1-prototype-1:-optimising-single-patch)
 
-[4.2 Prototype 2: Optimising 2x2 array (circular\_array\_3)	12](#4.2-prototype-2:-optimising-2x2-array-\(circular_array_3\))
+[4.2 Prototype 2: Optimising 2x2 array (circular\_array\_3)	12](#4.2-prototype-2:-optimising-2x2-array)
 
 [4.3 Prototype 3: Order of sequential rotation investigation	14](#4.3-prototype-3:-order-of-sequential-rotation-investigation)
 
@@ -65,9 +121,9 @@ has_toc: false
 
 [4.5 Prototype 5: Feed network design	16](#4.5-concept-selection:-feed-network-design)
 
-[4.6 Prototype 6: PCB1 Feed network	17](#4.6-prototype-5:-feed-network-version-1)
+[4.6 Prototype 6: PCB1 Feed network	17](#4.6-prototype-5:-feed-network)
 
-[**5\. Testing	19**](#5.-testing)
+[**5\. Testing	19**](#5.-testing-&-analysis)
 
 [**6\. Conclusion & Future Works	19**](#7.-conclusion)
 
@@ -121,7 +177,7 @@ To meet mission deliverables, a systematic methodology was employed: requirement
 
 ## **3.2 Key Antenna Performance Metrics** {#3.2-key-antenna-performance-metrics}
 
-The antenna's performance is primarily characterised by **S11** (Return Loss), where a value of \-10 dB ensures that over 90% of source energy is successfully delivered to the patches within the 13.93-13.99 GHz operational range (Verwilligen, 2015). To maintain link stability against Faraday rotation and CubeSat misalignment, the design utilises **Right-Hand Circular Polarisation (RHCP)** (Tubbal et al., 2021). The design prioritises **Realised RHCP Gain** ($\\ge10$ dBi), as this metric accounts for internal dielectric losses, impedance mismatch, and polarisation mismatch (Zvolensky, 2022). Coverage requirements are further defined by the **Half-Power Beamwidth (HPBW)**, which necessitates a gain of \-7 dBi at \+-12 degrees. Finally, the **Axial Ratio (AR)** is maintained below 3 dB to ensure high-quality polarisation purity and to minimise energy waste through unwanted cross-polarisation (Abulgasem et al., 2021). For detailed explanations of the metrics, see Appendix x.
+The antenna's performance is primarily characterised by **S11** (Return Loss), where a value of \-10 dB ensures that over 90% of source energy is successfully delivered to the patches within the 13.93-13.99 GHz operational range (Verwilligen, 2015). To maintain link stability against Faraday rotation and CubeSat misalignment, the design utilises **Right-Hand Circular Polarisation (RHCP)** (Tubbal et al., 2021). The design prioritises **Realised RHCP Gain** ($\\ge10$ dBi), as this metric accounts for internal dielectric losses, impedance mismatch, and polarisation mismatch (Zvolensky, 2022). For this report, ***“gain”*** *will always refer to **realised RHCP gain.*** Coverage requirements are further defined by the **Half-Power Beamwidth (HPBW)**, which necessitates a gain of \-7 dBi at \+-12 degrees. Finally, the **Axial Ratio (AR)** is maintained below 3 dB to ensure high-quality polarisation purity and to minimise energy waste through unwanted cross-polarisation (Abulgasem et al., 2021). For detailed explanations of the metrics, see Appendix x.
 
 ## **3.3 Selection of planar antenna type**  {#3.3-selection-of-planar-antenna-type}
 
@@ -240,7 +296,7 @@ Figure 6\. Performance of single patch (Prototype 1): a) Patch geometry, b) S11,
 Table 3: Single Patch Optimization Metrics (Prototype 1\)  
 A very high axial ratio of 14 dB is observed, as expected, as this single patch is linearly polarised.
 
-## **4.2 Prototype 2: Optimising 2x2 array (circular\_array\_3)** {#4.2-prototype-2:-optimising-2x2-array-(circular_array_3)}
+## **4.2 Prototype 2: Optimising 2x2 array** {#4.2-prototype-2:-optimising-2x2-array}
 
 This prototype forms a 2x2 array of the optimised single patch. As mentioned, the feeds are excited at different phases: from top left, clockwise at 0, 90, 180, 270 deg (Kuhlmann, 2023). The expected gain is 5.43 \+ 6 \= 11.43 dBi.   
 ![][image8] 
@@ -326,7 +382,7 @@ As seen in Table x, in order to get a smaller maximum width, the minimum width w
 
 Thus, the feed network will use the T-junctions and 90-degree bends.
 
-## **4.6 Prototype 5: Feed network version 1** {#4.6-prototype-5:-feed-network-version-1}
+## **4.6 Prototype 5: Feed network** {#4.6-prototype-5:-feed-network}
 
 ### **4.6.1 Microstrip and T-junction simulations**
 
@@ -336,62 +392,103 @@ Using the formula (source), I calculated the 50 Ohm microstrip width to be 1.111
 
 Using this trace width, I created the T-junction (Fig. x) which splits the power into two feeds of 50 Ohm characteristic impedance each. This is done by first splitting the starting feed (50 Ohm) to two 100 Ohm lines, each transformed via a quarter wavelength 70.7 Ohm line (Appendix for formula) to 50 Ohm.
 
-Then, since there is limited space between the patch feed points, I hypothesised that 100 Ohm lines could be omitted and the result would be the same. So I simulated this case (Fig. x), found the reflection to be unacceptable at \-13 dB. To solve this, I added triangle cuts with tuned dimensions, (Fig. x) shown to help reduce losses (lit), reducing S11 to \-35.6 dB.
+Then, since there is limited space between the patch feed points, I hypothesised that 100 Ohm lines could be omitted and the result would be the same. So I simulated this case (Fig. x), found the reflection to be unacceptable at \-13 dB. To solve this, I added mitered bends with tuned dimensions, (Fig. x) shown to help reduce losses (lit), reducing S11 to \-35.6 dB.
 
 **![][image16]** 
 
-Figure 13\. T-Junction Optimisation: (left) S11 comparison for T-junction without 100 Ohm line, (right) Triangle cuts for T-junction to reduce losses
+Figure 13\. T-Junction Optimisation: (left) S11 comparison for T-junction without 100 Ohm line, (right) Mitered bends for T-junction to reduce losses
 
 ### **4.6.2 Design of Feeds with 90-degree Phase Shifts**
 
-The previously calculated quarter wavelength is the difference in feed length for each patch. Using this, the feeds for each patch are laid out, with the appropriate lengths. It was hypothesised that even though some of the traces get closer than the 3 times width separation, that it occurred infrequently enough for the losses to be insignificant. After design, the phase shifts, achieved S11, transmission coefficients (Sx1 representing S21 to S51, where 2-5 are the feed points while 1 is the source) and gain are evaluated.  
+The previously calculated quarter wavelength is the difference in feed length for each patch. Using this, the feeds for each patch are laid out with the appropriate lengths. It was hypothesised that even though some of the traces get closer than the 3-times width separation, that it occurred infrequently enough for the losses to be insignificant. After design, the phase shifts, S11, transmission coefficients (Sx1 representing S21 to S51, where 2-5 are the feed points while 1 is the source) and gain are evaluated.  
 ![][image17]
 
 |  | 4 patches with feed |  |  |  |  | 8 patches with feed |  |  |  |  |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-|  | Phase shift / ° | S11 / dB | Sx1 / dB  | Gain / dBi | AR / dB | Phase shift / °  | S11 / dB | Sx1 / dB | Gain / dBi | AR |
+| Metric | Phase shift / ° | S11 / dB | Sx1 / dB  | Gain / dBi | AR / dB | Phase shift / °  | S11 / dB | Sx1 / dB | Gain / dBi | AR |
 | Ideal | 90 | \< \-20 | \> \-7.15 dB | 10 | \< 3 | 90 | \< \-20 | \> \-11.5 dB | 13 | \< 3 |
 | Achieved | 86.98 \~ 94.96 | \-23.21 | \-7.94 to \-6.39 | 8.58 | 3.77 | 86.98 \~ 96.30 | \-17.20 | \-11.67 to \-9.3 | 10.3 | 2.34  |
 |  |  |  |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |  |  |  |
 
-Unexpectedly, there were significant losses in the feed network which worsened the gain and AR. This was suspected due to the large difference in transmitted power, in which there was a \~2.3 dB (70% difference) between ports 2 and 5\. Despite the strong focus on tuning the phase shifts, the neglect of the 3 times trace width separation rule was the main culprit behind these losses. To mitigate this issue, a mix of increasing the patch spacing, tuning h2 so traces can be narrower may be the solution. 
+Unexpectedly, there were significant losses in the feed network which worsened the gain and AR. This was suspected due to the large difference in transmitted power, in which there was a \~2.3 dB (70% difference) in power transmitted to ports 2 and 5\. Despite the strong focus on tuning the phase shifts, the neglect of the 3-times trace width separation rule was the main culprit behind these losses. To mitigate this issue, a mix of increasing the patch spacing and tuning h2 so traces can be narrower may be the solution. 
 
-However, at this point, it was necessary to start fabrication for a functional prototype before the critical design review. Since the gain for 8 patches is now at 10.3 dBi, more design margin is needed so the array was doubled to 4x4, aiming for 13 dBi gain. The below were the simulated metrics.
+## **4.7 Prototype 6: PCB v1**
 
-| S11 / dB | Gain / dBi | AR |
-| :---- | :---- | :---- |
-| \-18.11 | 14.67 | 2.28 |
-|  |  |  |
-|  |  |  |
+At this point, it was necessary to start fabrication for a functional prototype before the critical design review. The gain for 8 patches is now at 10.3 dBi. However, the target including a 50% margin is 11.5 dB. Thus, the array was doubled to 4x4. A gain of 13 dBi is expected, exceeding the target. For the gain at \+- 12 deg, we will also target 8.5 dB, 50% above the required 7 dBi.
 
-![][image18] 
+The final feed network (Fig. x) was created by copying the 2x2 subarray 4 times, with more T-junctions to feed each subarray from one source. An SMA connector footprint was also added on the feed layer for the power input. This design was simulated (Fig. x, Table x), all metrics satisfying the target, except the gain at \+-12 degrees narrowly misses 8.5dB by \~0.2dB. This small variation was deemed acceptable as there is insufficient time to optimise it further.
 
-It was noted that there will be electrical separation required between the feed layer and other metal components of the CubeSat. For both electrical separation and mechanical stability, a Rohacell 31 HF foam will be added below the feed layer. It was simulated that a 12mm thick Rohacell will be sufficient to prevent any metal in the back from affecting the key metrics.
+![][image18]
 
-# **5\. Testing** {#5.-testing}
+Figure x. 
 
-![][image19]  
-S11: At 13.93, 13.95, 13.99 GHz, S11 is \-7.99, \-8.27, \-8.98 dB; The null had shifted to a shallow null at 14.025 GHz.  
-![][image20]
+|  | S11 / dB | Gain at boresight / dBi | Gain at \+- 12 deg / dBi | AR / dB |
+| :---- | :---- | :---- | :---- | :---- |
+| Required | \< 10 | \>= 11.5 | \>= 8.5 | \< 3 |
+| Simulated | \-18.45 to \-18.26 | 14.67 | 8.38, 8.43 | 2.82 |
+|  |  |  |  |  |
+|  |  |  |  |  |
 
-Automated testing was done at Temasek Labs’ anechoic chamber. 
+Table x.
 
-| S11 / dB | Gain / dBi | AR |
-| :---- | :---- | :---- |
-| \-8.27 to \-7.99 dB | 13  | 1.3 |
-|  |  |  |
-|  |  |  |
+To make the design fabrication-ready, an SMA footprint was added so power can be fed to the antenna via an SMA connector. The substrate dimensions were also expanded to 98mm x 98mm so that 4 mounting holes could be included. Thus, the design was fabricated by converting the HFSS file to Gerber and NC drill files via DipTrace, a PCB design software. The files were sent to PCB manufacturer PCBWay, who manufactured the prototype which will be referred to as PCB v1 from now.   
+![][image19]   
+Figure x. a) Fabrication-ready design of antenna including mounting holes, SMA connector solder pad (left); b) Fabricated PCB bottom layer with soldered SMA connector (right). Note that a) shows the top-down view while b) shows the bottom view, thus why the feed network appears flipped.
 
-     
+### **4.7.1 Electrical Separation and Mechanical Stability**
 
-# **6\. PCB v2 Works and Future Plans**
+While the antenna was getting fabricated, it was noted that electrical separation is required between the bottom feed layer and other metal components of the CubeSat. For both electrical separation and mechanical stability, a Rohacell 31 HF foam will be added below the feed layer.  It was simulated that a 12mm thick foam will be sufficient to prevent any metal in the back from affecting the key metrics. Thus, the foam was procured. Mounting holes and a hole for the SMA connector to be plugged in were drilled. 
 
-To address the S11 performance and further optimise the antenna, the following future works are planned for PCB v2. The new design will strictly adhere to the 3-times trace width separation rule to eliminate crosstalk and transmission losses observed in the first iteration. Further tuning of h2 will be conducted to allow for narrower trace widths, facilitating greater electrical separation between critical power-splitting junctions. A central plastic screw will be integrated into the final assembly to enhance the mechanical stability of the three-layer stackup during launch vibrations without disrupting the electromagnetic fields.
+My NUS mentor also gave feedback that a central screw could be added for mechanical stability. As a central metal screw would be too close to the patches and feed traces, a plastic screw at similar dielectric constant to Rogers 4350B could be utilised. This will be done in the second fabricated design later.
+
+# **5\. Testing & Analysis** {#5.-testing-&-analysis}
+
+S11 measurement of the fabricated PCB v1 was done on a Vector Network Analyser (VNA) in the MMIC Lab and automated testing of key metrics was done at Temasek Labs’ anechoic chamber. These measured results were compared with the simulated S11.
+
+![][image20]  
+Figure x. Antenna mounting setup in the anechoic test chamber.
+
+![][image21]  
+Fig x. Measured (M) vs. Simulated (S) Realised RHCP Gain for two x-axis cuts: phi \= 0 and phi \= 90 (see Appendix x)  
+![][image22]  
+Fig x. Measured (M) vs. Simulated (S) Axial Ratio for two x-axis cuts: phi \= 0 and phi \= 90  
+
+![][image23]  
+The measured gain is within 1-2 dB of the simulated values, which all satisfy requirements except the beamwidth at phi \= 90 deg is too narrow, such that at \-12 degrees, the gain is 1.7 dB short of the required 7 dB. After discussing with the team lead, this was found to be (?) acceptable.
+
+For the AR, the AR at phi \= 0 was within 1 dB of simulated values, but at 90 degrees, the AR was as high as 7.4 dB which was surprising.
+
+![][image24]
+
+Fig x. Measured (M) vs. Simulated (S) S11, with minimums labelled; Table x. Measured (M) vs. Simulated (S) S11
+
+The S11 shows a huge difference between simulation and measurement. Due to the many minimums present, it is hard to tell which minimums are which and whether they have shifted left or right from the simulation. Thus, generally, it can only be concluded that something had caused large power losses, most likely the feed network. In the frequency range of operation, the maximum S11 is \-7.76 dB which is a power reflection of 16.8%. 
+
+Upon analysis, a key issue with PCB v1 was identified, which is that the simulations had not accounted for manufacturing tolerances in the feed network trace widths. Especially important are the widths of the 70.7 Ohm quarter-wave transformers, the narrowest traces in the PCB, as they determine the impedance matching with remaining parts of the feed and hence can cause large losses if their widths vary too much. In 4.6, the feed network simulation revealed that within a 2x4 array, the power delivered to each patch could vary as much as 70%. This issue, exacerbated by the 70.7 Ohm lines manufacturing tolerances, could have led to an even greater difference in power delivered to each patch, explaining why the AR to was greatly worsened. 
+
+![][image25]
+
+Fig x. Quarter-wave transformer lines (2 per T-junction), 3 out of many circled in orange
+
+It is possible to simulate the manufacturing tolerances to check if the S11 and AR are worsened like in the measurement. According to PCBWay, for the 70.7 Ohm lines at width (w70) \= 0.6878mm are controlled within 20%, which is \+- 0.1376mm. For the minimum and maximum deviations, the antenna was resimulated. This verifies that indeed, the trace width tolerance of w70 could account for up to 7 dB of losses. The remaining 3dB of loss difference with the measured S11 can likely be attributed to trace tolerances for other lines such as the 50 Ohm line. 
+
+| Type of data | Measured | Simulated |  |  |
+| :---- | :---- | :---- | :---- | :---- |
+|  |  | W70 \= 0.5502mm (-20%) | W70 \= 0.6878mm (nominal) | W70 \= 0.8253mm (+20%) |
+| S11 / dB | \-8.03 | \-11.2 | \-18.5 | \-21.7 |
+
+ Table x
+
+# **6\. Future Plans**
+
+To address the S11 performance and further optimise the antenna, the following future works are planned for PCB v2. The new design will strictly adhere to the 3-times trace width separation rule to eliminate crosstalk and transmission losses observed in the first iteration. Further tuning of h2 will be conducted to allow for narrower trace widths, facilitating greater electrical separation, especially between critical power-splitting junctions. However, the trace widths must also not be too narrow so as to cause large manufacturing tolerances. The tradeoffs between electrical separation and tolerances will be evaluated so as to choose an optimal h2 and trace widths. It is also possible to pay more (about $100 more for 4 PCBs) for PCBWay to control the trace widths within 10% instead of 20%, which also helps to decrease tolerance errors.
+
+Furthermore, following mentor’s feedback, a central plastic screw will be integrated into the final assembly to enhance the mechanical stability of the three-layer stackup during launch vibrations without disrupting the electromagnetic fields.
 
 # **7\. Conclusion**  {#7.-conclusion}
 
-This project successfully designed, simulated, and prototyped a custom Ku-band circularly-polarised microstrip patch array for the Galassia 5 CubeSat mission. By addressing the gap in commercially available space-qualified hardware for the 13.93-13.99 GHz range, this design provides a critical communication link for the satellite.The use of a 4x4 sequentially-rotated array was instrumental in achieving a high realised RHCP gain of 13 dBi and a low axial ratio of 1.3 dB, both of which exceed the initial design specifications. Although minor S11 deviations were observed due to feed network density, the project successfully validated the viability of a low-profile, ceramic-substrate antenna for high-frequency space applications.
+This project successfully designed, simulated, and prototyped a custom Ku-band circularly-polarised microstrip patch array for the Galassia 5 CubeSat mission. By addressing the gap in commercially available space-qualified hardware for the 13.93-13.99 GHz range, this design provides a critical communication link for the satellite.The use of a 4x4 sequentially-rotated array was instrumental in achieving a high realised RHCP gain of 13 dBi, exceeding the initial design specifications. Although S11 deviations were observed due to feed network density, the project successfully validated the viability of a low-profile, ceramic-substrate antenna for high-frequency space applications.
 
 # **8\. References**  {#8.-references}
 
@@ -506,13 +603,13 @@ I would like to thank my DSO mentor Ms Huang Ying Ying and my NUS supervisor Mr 
 
 **S11 (Return Loss)** is the ratio of reflected voltage to source voltage. A lower S11 is desired because a small S11 value indicates that a significant amount of energy has been successfully delivered to the antenna rather than being reflected back to the source due to a mismatch (Ezurio, n.d.). Ideally, the antenna and source impedance should match at the standard 50 Ohms. The standard is to ensure \>90% power transmission, corresponding to S11 ≤−10 dB (Verwilligen, 2015\) in the operational range of 13.93-13.99 GHz.
 
-![][image21]
+![][image26]
 
 Figure 2\. S11 (dB) vs Frequency
 
 **Polarisation** is the direction in which the vibrations of the electromagnetic wave are restricted. To prevent signal attenuation and mitigate the atmospheric "Faraday rotation" effect, CubeSat antennas typically employ circular polarization (CP), making the communication link insensitive to antenna misalignment (Tubbal et al., 2021). Typically, right-hand circular polarisation (RHCP) is chosen for satellite communications to maintain a robust and properly aligned link with the ground station.
 
-**Gain** describes how effectively the antenna concentrates radiated power in a particular direction compared to an isotropic radiator. A higher gain indicates a more focused beam. **Realised RHCP Gain** is a comprehensive metric that determines the true operating performance of the antenna because it includes the impedance mismatch at the feed port on top of the internal material and dielectric losses (Zvolensky, 2022), and the polarization mismatch (Denker, 2025). Thus, the realised RHCP gain at boresight will have to be ≥10 dBi. For this report, “gain” will always refer to realised RHCP gain.
+**Gain** describes how effectively the antenna concentrates radiated power in a particular direction compared to an isotropic radiator. A higher gain indicates a more focused beam. **Realised RHCP Gain** is a comprehensive metric that determines the true operating performance of the antenna because it includes the impedance mismatch at the feed port on top of the internal material and dielectric losses (Zvolensky, 2022), and the polarization mismatch (Denker, 2025). Thus, the realised RHCP gain at boresight will have to be ≥10 dBi. 
 
 **Half-power beamwidth (HPBW)** is the angle where the radiated power drops to half (−3 dB) of the boresight peak power. It describes how wide or narrow the beam is. For an antenna satisfying 10 dBi gain and \+-12 degrees HPBW, the gain will need to be \>=7 dBi at \+-12 degrees. 
 
@@ -531,7 +628,7 @@ Appendix x: List of HFSS design file names
 | Section | File name |
 | :---- | :---- |
 | [4.3 Prototype 1: Optimising single patch](#4.1-prototype-1:-optimising-single-patch) |  |
-| [4.2 Prototype 2: Optimising 2x2 array (circular\_array\_3)](#4.2-prototype-2:-optimising-2x2-array-\(circular_array_3\)) | circular\_array\_3 |
+| [4.2 Prototype 2: Optimising 2x2 array (circular\_array\_3)](#4.2-prototype-2:-optimising-2x2-array) | circular\_array\_3 |
 |  |  |
 
 Table 9: List of HFSS Design File Names
@@ -556,7 +653,7 @@ Table 9: List of HFSS Design File Names
 [image18]: {{site.baseurl}}/Assets/images/fig/18.png
 [image19]: {{site.baseurl}}/Assets/images/fig/19.png
 [image20]: {{site.baseurl}}/Assets/images/fig/20.png
-<!-- [image21]: {{site.baseurl}}/Assets/images/fig/21.png
+[image21]: {{site.baseurl}}/Assets/images/fig/21.png
 [image22]: {{site.baseurl}}/Assets/images/fig/22.png
 [image23]: {{site.baseurl}}/Assets/images/fig/23.png
 [image24]: {{site.baseurl}}/Assets/images/fig/24.png
@@ -565,5 +662,4 @@ Table 9: List of HFSS Design File Names
 [image27]: {{site.baseurl}}/Assets/images/fig/27.png
 [image28]: {{site.baseurl}}/Assets/images/fig/28.png
 [image29]: {{site.baseurl}}/Assets/images/fig/29.png
-[image30]: {{site.baseurl}}/Assets/images/fig/30.png -->
- -->
+[image30]: {{site.baseurl}}/Assets/images/fig/30.png
