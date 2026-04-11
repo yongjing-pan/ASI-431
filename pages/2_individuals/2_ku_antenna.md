@@ -345,7 +345,7 @@ Figure x.
 
 Unexpectedly, there were significant losses in the feed network which worsened the gain and AR. This was suspected due to the large difference in transmitted power, in which there was a \~2.3 dB (70% difference) in power transmitted to ports 2 and 5\. Despite the strong focus on tuning the phase shifts, the neglect of the 3-times trace width separation rule was the main culprit behind these losses. To mitigate this issue, a mix of increasing the patch spacing and tuning h2 so traces can be narrower may be the solution. 
 
-## **4.7 Prototype 6: PCB v1** {#4.7-prototype-6:-pcb-v1}
+## **4.7 Prototype 6: PCB v1**
 
 At this point, it was necessary to start fabrication for a functional prototype before the critical design review. The gain for 8 patches is now at 10.3 dBi. However, the target including a 50% margin is 11.5 dB. Thus, the array was doubled to 4x4. A gain of 13 dBi is expected, exceeding the target. For the gain at \+- 12 deg, we will also target 8.5 dB, 50% above the required 7 dBi.
 
@@ -362,13 +362,13 @@ To make the design fabrication-ready, an SMA footprint was added so power can be
 ![][image22]   
 Figure x. a) Fabrication-ready design of antenna including mounting holes, SMA connector solder pad (left); b) Fabricated PCB bottom layer with soldered SMA connector (right). Note that a) shows the top-down view while b) shows the bottom view, thus why the feed network appears flipped.
 
-### **4.7.1 Electrical Separation and Mechanical Stability** {#4.7.1-electrical-separation-and-mechanical-stability}
+### **4.7.1 Electrical Separation and Mechanical Stability**
 
 While the antenna was getting fabricated, it was noted that electrical separation is required between the bottom feed layer and other metal components of the CubeSat. For both electrical separation and mechanical stability, a Rohacell 31 HF foam will be added below the feed layer.  It was simulated that a 12mm thick foam will be sufficient to prevent any metal in the back from affecting the key metrics. Thus, the foam was procured. Mounting holes and a hole for the SMA connector to be plugged in were drilled. 
 
 My NUS mentor also gave feedback that a central screw could be added for mechanical stability. As a central metal screw would be too close to the patches and feed traces, a plastic screw at similar dielectric constant to Rogers 4350B could be utilised. This will be done in the second fabricated design later.
 
-# **5\. Testing & Analysis** {#5.-testing-&-analysis}
+# **5\. Testing & Analysis**
 
 S11 measurement of the fabricated PCB v1 was done on a Vector Network Analyser (VNA) in the MMIC Lab and automated testing of key metrics was done at Temasek Labs’ anechoic chamber. These measured results were compared with the simulated S11.
 
@@ -403,17 +403,17 @@ It is possible to simulate the manufacturing tolerances to check if the S11 and 
 
  Table x.
 
-# **6\. Future Plans** {#6.-future-plans}
+# **6\. Future Plans**
 
 To address the S11 performance and further optimise the antenna, the following future works are planned for PCB v2. The new design will strictly adhere to the 3-times trace width separation rule to eliminate crosstalk and transmission losses observed in the first iteration. Further tuning of h2 will be conducted to allow for narrower trace widths, facilitating greater electrical separation, especially between critical power-splitting junctions. However, the trace widths must also not be too narrow so as to cause large manufacturing tolerances. The tradeoffs between electrical separation and tolerances will be evaluated so as to choose an optimal h2 and trace widths. It is also possible to pay more (about $100 more for 4 PCBs) for PCBWay to control the trace widths within 10% instead of 20%, which also helps to decrease tolerance errors.
 
 Furthermore, following mentor’s feedback, a central plastic screw will be integrated into the final assembly to enhance the mechanical stability of the three-layer stackup during launch vibrations without disrupting the electromagnetic fields.
 
-# **7\. Conclusion**  {#7.-conclusion}
+# **7\. Conclusion**
 
 This project successfully designed, simulated, and prototyped a custom Ku-band circularly-polarised microstrip patch array for the Galassia 5 CubeSat mission. By addressing the gap in commercially available space-qualified hardware for the 13.93-13.99 GHz range, this design provides a critical communication link for the satellite.The use of a 4x4 sequentially-rotated array was instrumental in achieving a high realised RHCP gain of 13 dBi, exceeding the initial design specifications. Although S11 deviations were observed due to feed network density, the project successfully validated the viability of a low-profile, ceramic-substrate antenna for high-frequency space applications.
 
-# **8\. References**  {#8.-references}
+# **8\. References**
 
 Abulgasem, S., et al. (2021). Antenna designs for CubeSats: A review. *IEEE Access*, *9*.
 
@@ -520,9 +520,9 @@ Zvolensky, T. (2022). *Antenna radiation efficiency*. rfe Blog.
 **Acknowledgements**  
 I would like to thank my DSO mentor Ms Huang Ying Ying and my NUS supervisor Mr Chua Tai Wei, both with extensive knowledge on antenna design, whose guidance without which I would not have been able to complete my design tasks this semester. I would also like to thank my NUS supervisor Mr Eugene Ee and Mr Ng Zhen Ning from Nuspace for the practical and valuable advice they have offered that help in the realisation of this project. 
 
-# **9\. Appendix** {#9.-appendix}
+# **9\. Appendix**
 
-### **Appendix A: Detailed Performance Metric Definitions** {#appendix-a:-detailed-performance-metric-definitions}
+### **Appendix A: Detailed Performance Metric Definitions**
 
 **S11 (Return Loss)** is the ratio of reflected voltage to source voltage. A lower S11 is desired because a small S11 value indicates that a significant amount of energy has been successfully delivered to the antenna rather than being reflected back to the source due to a mismatch (Ezurio, n.d.). Ideally, the antenna and source impedance should match at the standard 50 Ohms. The standard is to ensure \>90% power transmission, corresponding to S11 ≤−10 dB (Verwilligen, 2015\) in the operational range of 13.93-13.99 GHz.
 
@@ -538,7 +538,7 @@ Figure 2\. S11 (dB) vs Frequency
 
 **Axial ratio (AR)** defines the quality of the circular polarization by calculating the magnitude ratio of the electromagnetic wave's two orthogonal, 90-degree phase-shifted field vectors (Kuhlmann, 2023). It measures the polarization purity of the wave; ideally, the AR must stay below 3 dB to ensure high-quality circular polarization (Abulgasem et al., 2021). Since our system strictly utilises RHCP without LHCP receivers, AR is not so significant as realised RHCP gain, and is just a measure of polarisation efficiency. If two antennas share the same realised RHCP gain, they yield identical received power, but the one with a higher AR wastes some of the source energy in unutilised LHCP cross-polarisation (Denker, 2025).
 
-### **Appendix B: How the Circularly-Polarised Patch Antenna Works** {#appendix-b:-how-the-circularly-polarised-patch-antenna-works}
+### **Appendix B: How the Circularly-Polarised Patch Antenna Works**
 
 The patch antenna consists of a conducting patch layered on top of a dielectric substrate, which is on top of a conductive ground plane. Through a feedline, alternating electric fields are formed between the patch and ground plane, which resonate and escape through both ends of the patch antenna which act as radiating slots (Jackson, n.d.; Orban & Moernaut, 2005). 
 
