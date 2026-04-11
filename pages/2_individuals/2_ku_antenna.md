@@ -13,123 +13,67 @@ has_toc: false
     <h3>A0257283X</h3>
   </div>
 </div>
- 
- Other things i may add
-
-Key things to add
-
-* Pcb1 feed  
-* Tests  
-* Pcb2 plans
-
-* Include analysis **throughout report**   
-* Effect of presence of stubs \+ lit review   
-* Central Plastic screw for mech stability  
-* Tie in mutual coupling when talking abt feed network?  
-  * Mutual Coupling: When grouping multiple patches to form a high-gain array, the close proximity of the elements introduces mutual coupling, which can lower antenna efficiency, cause impedance mismatching, and distort the radiation pattern (Li et al., 2018). This will be mitigated by ensuring adequate electrical spacing between the elements and optimising the feed network.  
-* Improve writing & citation quality w NotebookLM  
-  * Some sections if they look sus  
-* Small(er) stuff  
-  * Pic clarity  
-  * Fig, Table names \+ numberings  
-  * Appendices  
-  * Contents page clickable  
-  * Check all references are accessible   
-* Trivial stuff  
-  *    
-  * 
-
-This report should document the entirety of your work that you have done since the start of your project.
-
-If you are working on a more design-focused project, the following points should be covered in the report:
-
-* Identify the problem of interest and value proposition for your project.  
-* Design specifications that you are required to meet.    
-* Detail design of selected concept solution(s).  
-* Fabrication and testing of prototypes of the selected concept solution(s), as well as design iterations (if any).  
-* Evaluation of whether the intended deliverables of the project have been made, and recommendations for future work. 
-
-If you are working on a more research-focused project, the following points should be covered in the report:
-
-* Identify the research gaps to address.  
-* Hypotheses that you plan to explore and scope of the research.    
-* Research methods/protocols (e.g. number of specimens, experimental procedure, etc.) used.  
-* Collection and analysis of data from tests, as well as test iterations (if any).   
-* Conclusions from the experimental programme and recommendations for future work. 
-
-If your project involves a mix of both design and research elements, you are expected to document the work that is appropriate to these elements depending on the context and scope of your work. 
-
-In a nutshell, at the end of your project you are expected to summarise the key accomplishments of your project which should comprise the following:
-
-* Clear and compelling case about the novelty and/or value of your project.  
-* Detailed, well-articulated, and appropriate steps taken to accomplish the intended deliverables of the project.  
-* Evidence which demonstrates that the intended deliverables of the project have been addressed successfully.
-
-By default, the report should be in the form of a website on GitHub. You are required to submit the URL to the website here. However, if you have been granted permission to submit a normal report instead of an online version on GitHub, you may submit the report here as well. 
-
-If you are working on a group project, only ONE person is required to submit on behalf of the group.  
-
- 
+  
 
 # **Contents page** {#contents-page}
 
-[**Contents page	2**](#contents-page)
+[**Contents page  2**](#contents-page)
 
-[**1\.  Introduction	2**](#1.-introduction)
+[**1\.  Introduction  2**](#1--introduction)
 
-[1.2  Problem Statement	2](#1.2-problem-statement)
+[1.2  Problem Statement 2](#12--problem-statement)
 
-[1.3  Objectives and Scope	3](#1.3-objectives-and-scope)
+[1.3  Objectives and Scope  3](#13--objectives-and-scope)
 
-[1.4 Specifications and Constraints	3](#1.4-specifications-and-constraints)
+[1.4 Specifications and Constraints 3](#14-specifications-and-constraints)
 
-[1.5 Novelty and Contributions	3](#1.5-novelty-and-contributions)
+[1.5 Novelty and Contributions  3](#15-novelty-and-contributions)
 
-[**2\. Background and Literature Review	4**](#2.-background-and-literature-review)
+[**2\. Background and Literature Review 4**](#2-background-and-literature-review)
 
-[**3\. Design Methodology	4**](#3.-design-methodology)
+[**3\. Design Methodology 4**](#3-design-methodology)
 
-[3.1 Antenna Design Process	4](#3.1-antenna-design-process)
+[3.1 Antenna Design Process 4](#31-antenna-design-process)
 
-[3.2 Key Antenna Performance Metrics	4](#3.2-key-antenna-performance-metrics)
+[3.2 Key Antenna Performance Metrics  4](#32-key-antenna-performance-metrics)
 
-[3.3 Selection of planar antenna type	5](#3.3-selection-of-planar-antenna-type)
+[3.3 Selection of planar antenna type 5](#33-selection-of-planar-antenna-type)
 
-[3.3.1 Concept evaluation matrix	6](#3.3.1-concept-evaluation-matrix)
+[3.3.1 Concept evaluation matrix  6](#331-concept-evaluation-matrix)
 
-[3.3.2 Mitigating the Disadvantages of Patch Antenna	6](#3.3.2-mitigating-the-disadvantages-of-patch-antenna)
+[3.3.2 Mitigating the Disadvantages of Patch Antenna  6](#332-mitigating-the-disadvantages-of-patch-antenna)
 
-[3.3.3. Preliminary feasibility calculations	7](#3.3.3.-preliminary-feasibility-calculations)
+[3.3.3. Preliminary feasibility calculations  7](#333-preliminary-feasibility-calculations)
 
-[3.4 Selection of type of circularly-polarised patch antenna	7](#3.4-selection-of-type-of-circularly-polarised-patch-antenna)
+[3.4 Selection of type of circularly-polarised patch antenna  7](#34-selection-of-type-of-circularly-polarised-patch-antenna)
 
-[3.4.1 How the Circularly-Polarised Patch Antenna Works	7](#appendix-b:-how-the-circularly-polarised-patch-antenna-works)
+[3.4.1 How the Circularly-Polarised Patch Antenna Works 7](#341-how-the-circularly-polarised-patch-antenna-works)
 
-[3.4 PCB Stackup Design	9](#3.4-pcb-stackup-design)
+[3.4 PCB Stackup Design 9](#34-pcb-stackup-design)
 
-[3.5 Substrate material and height selection	10](#3.5-substrate-material-and-height-selection)
+[3.5 Substrate material and height selection  10](#35-substrate-material-and-height-selection)
 
-[**4\.  Prototype Development	11**](#4.-prototype-development)
+[**4\.  Prototype Development 11**](#4--prototype-development)
 
-[4.1 Prototype 1: Optimising single patch	11](#4.1-prototype-1:-optimising-single-patch)
+[4.1 Prototype 1: Optimising single patch 11](#41-prototype-1-optimising-single-patch)
 
-[4.2 Prototype 2: Optimising 2x2 array (circular\_array\_3)	12](#4.2-prototype-2:-optimising-2x2-array)
+[4.2 Prototype 2: Optimising 2x2 array (circular_array_3) 12](#42-prototype-2-optimising-2x2-array)
 
-[4.3 Prototype 3: Order of sequential rotation investigation	14](#4.3-prototype-3:-order-of-sequential-rotation-investigation)
+[4.3 Prototype 3: Order of sequential rotation investigation  14](#43-prototype-3-order-of-sequential-rotation-investigation)
 
-[4.4 Prototype 4: 2x4 Array Simulation	15](#4.4-prototype-4:-2x4-array-simulation)
+[4.4 Prototype 4: 2x4 Array Simulation  15](#44-prototype-4-2x4-array-simulation)
 
-[4.5 Prototype 5: Feed network design	16](#4.5-concept-selection:-feed-network-design)
+[4.5 Prototype 5: Feed network design 16](#45-concept-selection-feed-network-design)
 
-[4.6 Prototype 6: PCB1 Feed network	17](#4.6-prototype-5:-feed-network)
+[4.6 Prototype 6: PCB1 Feed network 17](#46-prototype-5-feed-network)
 
-[**5\. Testing	19**](#5.-testing-&-analysis)
+[**5\. Testing  19**](#5--testing--analysis)
 
-[**6\. Conclusion & Future Works	19**](#7.-conclusion)
+[**6\. Conclusion & Future Works  19**](#7--conclusion)
 
-[**7\. References	20**](#8.-references)
+[**7\. References 20**](#8--references)
 
-[**8\. Appendix	22**](#9.-appendix)
+[**8\. Appendix 22**](#9--appendix) 
 
 # **1\.  Introduction**  {#1.-introduction}
 
@@ -252,11 +196,11 @@ As mentioned in 3.4.1, a basic patch antenna consists of a patch layer, substrat
 However, to create the 2x2 array, we need to excite each of 4 patches at 90 degrees phase difference which requires a feed network. If a complex feeding network were implemented on the same layer as the patches, it would generate undesired spurious radiation, which could affect the antenna's overall performance and S11 (Minz, Kang, & Park, 2020). Thus, also accounting for the probe-fed design, a feed network must be designed on a 3rd layer. There are two options. It can either be a microstrip line or a stripline. A stripline is a signal trace sandwiched symmetrically between two substrate layers and two ground planes (Fig. x) ("A comparative study", 2016). From my research, stripline would cause more losses so it was rejected. While this fully enclosed structure prevents radiation leakage, striplines can introduce higher losses ("A comparative study", 2016). Furthermore, a stripline requires a more complex, heavier multi-layer fabrication process. Therefore, to minimise these transmission losses and simplify manufacturing, the microstrip line feed network was chosen instead.  
 ![][image5]
 
-## **3.5 Substrate material and height selection** {#3.5-substrate-material-and-height-selection}
+## **3.5 Substrate material and height selection**
 
-### The next step is to select the substrate material and heights, as these would affect the patch size and feed network trace widths.
+The next step is to select the substrate material and heights, as these would affect the patch size and feed network trace widths.
 
-### **3.5.1 Upper substrate & Substrate material**
+### **3.5.1 Upper substrate & Substrate material** {#3.5.1-upper-substrate-&-substrate-material}
 
    
 ![][image6]  
@@ -270,7 +214,7 @@ Rogers RO4350B (r \= 3.66) was assessed against RT/duroid 5880 (r \= 2.2). Whils
 
 Considering all these factors \- balancing bandwidth requirements, size constraints, and the crucial need for mechanical rigidity \- a substrate height of 0.762 mm and Rogers 4350B were selected, a decision also endorsed by my mentor.
 
-### **3.5.2 Lower substrate height**
+### **3.5.2 Lower substrate height** {#3.5.2-lower-substrate-height}
 
 For the lower substrate height h2, this will be similar to h to reduce PCB warping, as unequal dielectric thicknesses can induce mechanical stress during lamination, leading to severe board deformation (Adrian, 2025; Cadence PCB Education, 2025). h2 will affect the trace widths of the feed network. The feed network will consist of 50 Ohm, 70.7 Ohm quarter-wave transformers and possibly lower impedances, due to the need to split the power source to 4 feeds or more. Due to the small area of the patches, the feed positions will also be close together, which means the feed network would need to be compact and thus the trace widths cannot be too wide, as it would lead to field leakage and coupling to neighbouring traces or feed points. The widths must also not be too small to introduce large manufacturing tolerance errors. Thus, h2 will be further tuned after more simulation.
 
@@ -368,15 +312,7 @@ Using power-splitting and quarter-wave transformer formulae (see Appendix x), on
 Below are listed the key trace widths: Z1T to Z4T for a range of patch impedance Z\_P and substrate height h2.  
 h2 is constrained to \[0.686, 838\], maximum 10% difference from h to reduce PCB warping (See 3.5). The quarter wavelength is calculated from the guided wavelength (from r and 0\) to be 3.18mm.The minimum manufacturable trace width from PCB suppliers is 0.0508mm (PCBWay, n.d.). To limit crosstalk with other traces and feed points, and based on the standard separation for high frequency traces: 3-5 times the trace width (Sierra Circuits, n.d.), the maximum acceptable trace width can be calculated to be 1.09mm.  
 ![][image14]  
-Figure x. Maximum acceptable trace width (in blue) calculation
-
-| Z\_P | Z1T | Z2T | Z3T | Z4T | Min. width (h2=0.762mm) | Max. width (h2=0.762mm) |
-| :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| 50 | 25 | **16.67** | 25 | **50** | 1.667 | 7.307 |
-| 100 | 35.36 | **33.33** | 50 | **100** | 0.416 | 3.026 |
-| 200 | **50** | 66.67 | 100 | **200** | 0.0323 | 1.667 |
-| 250 | **55.90** | 83.33 | 125 | **250** | 0.00904 | 1.387 |
-
+Figure x. Maximum acceptable trace width (in blue) calculation![][image15]  
 Table x.  
 As seen in Table x, in order to get a smaller maximum width, the minimum width will decrease much below the minimum manufacturable. Thus, the sequential rotated feed is not feasible given our compact patch arrangement.
 
@@ -384,9 +320,9 @@ Thus, the feed network will use the T-junctions and 90-degree bends.
 
 ## **4.6 Prototype 5: Feed network** {#4.6-prototype-5:-feed-network}
 
-### **4.6.1 Microstrip and T-junction simulations**
+### **4.6.1 Microstrip and T-junction simulations** {#4.6.1-microstrip-and-t-junction-simulations}
 
-![][image15]  
+![][image16]  
 Figure 12\. Typical microstrip feed network  
 Using the formula (source), I calculated the 50 Ohm microstrip width to be 1.1112mm for substrate height of 0.508mm. I simulated this microstrip line and found a very good S11 of **\-31.8 dB.**
 
@@ -394,49 +330,39 @@ Using this trace width, I created the T-junction (Fig. x) which splits the power
 
 Then, since there is limited space between the patch feed points, I hypothesised that 100 Ohm lines could be omitted and the result would be the same. So I simulated this case (Fig. x), found the reflection to be unacceptable at \-13 dB. To solve this, I added mitered bends with tuned dimensions, (Fig. x) shown to help reduce losses (lit), reducing S11 to \-35.6 dB.
 
-**![][image16]** 
+**![][image17]** 
 
 Figure 13\. T-Junction Optimisation: (left) S11 comparison for T-junction without 100 Ohm line, (right) Mitered bends for T-junction to reduce losses
 
-### **4.6.2 Design of Feeds with 90-degree Phase Shifts**
+### **4.6.2 Design of Feeds with 90-degree Phase Shifts** {#4.6.2-design-of-feeds-with-90-degree-phase-shifts}
 
 The previously calculated quarter wavelength is the difference in feed length for each patch. Using this, the feeds for each patch are laid out with the appropriate lengths. It was hypothesised that even though some of the traces get closer than the 3-times width separation, that it occurred infrequently enough for the losses to be insignificant. After design, the phase shifts, S11, transmission coefficients (Sx1 representing S21 to S51, where 2-5 are the feed points while 1 is the source) and gain are evaluated.  
-![][image17]
+![][image18]
 
-|  | 4 patches with feed |  |  |  |  | 8 patches with feed |  |  |  |  |
-| :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| Metric | Phase shift / ° | S11 / dB | Sx1 / dB  | Gain / dBi | AR / dB | Phase shift / °  | S11 / dB | Sx1 / dB | Gain / dBi | AR |
-| Ideal | 90 | \< \-20 | \> \-7.15 dB | 10 | \< 3 | 90 | \< \-20 | \> \-11.5 dB | 13 | \< 3 |
-| Achieved | 86.98 \~ 94.96 | \-23.21 | \-7.94 to \-6.39 | 8.58 | 3.77 | 86.98 \~ 96.30 | \-17.20 | \-11.67 to \-9.3 | 10.3 | 2.34  |
-|  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |
+Figure x. 
+
+![][image19]
 
 Unexpectedly, there were significant losses in the feed network which worsened the gain and AR. This was suspected due to the large difference in transmitted power, in which there was a \~2.3 dB (70% difference) in power transmitted to ports 2 and 5\. Despite the strong focus on tuning the phase shifts, the neglect of the 3-times trace width separation rule was the main culprit behind these losses. To mitigate this issue, a mix of increasing the patch spacing and tuning h2 so traces can be narrower may be the solution. 
 
-## **4.7 Prototype 6: PCB v1**
+## **4.7 Prototype 6: PCB v1** {#4.7-prototype-6:-pcb-v1}
 
 At this point, it was necessary to start fabrication for a functional prototype before the critical design review. The gain for 8 patches is now at 10.3 dBi. However, the target including a 50% margin is 11.5 dB. Thus, the array was doubled to 4x4. A gain of 13 dBi is expected, exceeding the target. For the gain at \+- 12 deg, we will also target 8.5 dB, 50% above the required 7 dBi.
 
 The final feed network (Fig. x) was created by copying the 2x2 subarray 4 times, with more T-junctions to feed each subarray from one source. An SMA connector footprint was also added on the feed layer for the power input. This design was simulated (Fig. x, Table x), all metrics satisfying the target, except the gain at \+-12 degrees narrowly misses 8.5dB by \~0.2dB. This small variation was deemed acceptable as there is insufficient time to optimise it further.
 
-![][image18]
+![][image20]
 
 Figure x. 
 
-|  | S11 / dB | Gain at boresight / dBi | Gain at \+- 12 deg / dBi | AR / dB |
-| :---- | :---- | :---- | :---- | :---- |
-| Required | \< 10 | \>= 11.5 | \>= 8.5 | \< 3 |
-| Simulated | \-18.45 to \-18.26 | 14.67 | 8.38, 8.43 | 2.82 |
-|  |  |  |  |  |
-|  |  |  |  |  |
-
+![][image21]  
 Table x.
 
 To make the design fabrication-ready, an SMA footprint was added so power can be fed to the antenna via an SMA connector. The substrate dimensions were also expanded to 98mm x 98mm so that 4 mounting holes could be included. Thus, the design was fabricated by converting the HFSS file to Gerber and NC drill files via DipTrace, a PCB design software. The files were sent to PCB manufacturer PCBWay, who manufactured the prototype which will be referred to as PCB v1 from now.   
-![][image19]   
+![][image22]   
 Figure x. a) Fabrication-ready design of antenna including mounting holes, SMA connector solder pad (left); b) Fabricated PCB bottom layer with soldered SMA connector (right). Note that a) shows the top-down view while b) shows the bottom view, thus why the feed network appears flipped.
 
-### **4.7.1 Electrical Separation and Mechanical Stability**
+### **4.7.1 Electrical Separation and Mechanical Stability** {#4.7.1-electrical-separation-and-mechanical-stability}
 
 While the antenna was getting fabricated, it was noted that electrical separation is required between the bottom feed layer and other metal components of the CubeSat. For both electrical separation and mechanical stability, a Rohacell 31 HF foam will be added below the feed layer.  It was simulated that a 12mm thick foam will be sufficient to prevent any metal in the back from affecting the key metrics. Thus, the foam was procured. Mounting holes and a hole for the SMA connector to be plugged in were drilled. 
 
@@ -446,20 +372,20 @@ My NUS mentor also gave feedback that a central screw could be added for mechani
 
 S11 measurement of the fabricated PCB v1 was done on a Vector Network Analyser (VNA) in the MMIC Lab and automated testing of key metrics was done at Temasek Labs’ anechoic chamber. These measured results were compared with the simulated S11.
 
-![][image20]  
+![][image23]  
 Figure x. Antenna mounting setup in the anechoic test chamber.
 
-![][image21]  
+![][image24]  
 Fig x. Measured (M) vs. Simulated (S) Realised RHCP Gain for two x-axis cuts: phi \= 0 and phi \= 90 (see Appendix x)  
-![][image22]  
+![][image25]  
 Fig x. Measured (M) vs. Simulated (S) Axial Ratio for two x-axis cuts: phi \= 0 and phi \= 90  
 
-![][image23]  
+![][image26]  
 The measured gain is within 1-2 dB of the simulated values, which all satisfy requirements except the beamwidth at phi \= 90 deg is too narrow, such that at \-12 degrees, the gain is 1.7 dB short of the required 7 dB. After discussing with the team lead, this was found to be (?) acceptable.
 
 For the AR, the AR at phi \= 0 was within 1 dB of simulated values, but at 90 degrees, the AR was as high as 7.4 dB which was surprising.
 
-![][image24]
+![][image27]
 
 Fig x. Measured (M) vs. Simulated (S) S11, with minimums labelled; Table x. Measured (M) vs. Simulated (S) S11
 
@@ -467,20 +393,17 @@ The S11 shows a huge difference between simulation and measurement. Due to the m
 
 Upon analysis, a key issue with PCB v1 was identified, which is that the simulations had not accounted for manufacturing tolerances in the feed network trace widths. Especially important are the widths of the 70.7 Ohm quarter-wave transformers, the narrowest traces in the PCB, as they determine the impedance matching with remaining parts of the feed and hence can cause large losses if their widths vary too much. In 4.6, the feed network simulation revealed that within a 2x4 array, the power delivered to each patch could vary as much as 70%. This issue, exacerbated by the 70.7 Ohm lines manufacturing tolerances, could have led to an even greater difference in power delivered to each patch, explaining why the AR to was greatly worsened. 
 
-![][image25]
+![][image28]
 
 Fig x. Quarter-wave transformer lines (2 per T-junction), 3 out of many circled in orange
 
 It is possible to simulate the manufacturing tolerances to check if the S11 and AR are worsened like in the measurement. According to PCBWay, for the 70.7 Ohm lines at width (w70) \= 0.6878mm are controlled within 20%, which is \+- 0.1376mm. For the minimum and maximum deviations, the antenna was resimulated. This verifies that indeed, the trace width tolerance of w70 could account for up to 7 dB of losses. The remaining 3dB of loss difference with the measured S11 can likely be attributed to trace tolerances for other lines such as the 50 Ohm line. 
 
-| Type of data | Measured | Simulated |  |  |
-| :---- | :---- | :---- | :---- | :---- |
-|  |  | W70 \= 0.5502mm (-20%) | W70 \= 0.6878mm (nominal) | W70 \= 0.8253mm (+20%) |
-| S11 / dB | \-8.03 | \-11.2 | \-18.5 | \-21.7 |
+![][image29]
 
- Table x
+ Table x.
 
-# **6\. Future Plans**
+# **6\. Future Plans** {#6.-future-plans}
 
 To address the S11 performance and further optimise the antenna, the following future works are planned for PCB v2. The new design will strictly adhere to the 3-times trace width separation rule to eliminate crosstalk and transmission losses observed in the first iteration. Further tuning of h2 will be conducted to allow for narrower trace widths, facilitating greater electrical separation, especially between critical power-splitting junctions. However, the trace widths must also not be too narrow so as to cause large manufacturing tolerances. The tradeoffs between electrical separation and tolerances will be evaluated so as to choose an optimal h2 and trace widths. It is also possible to pay more (about $100 more for 4 PCBs) for PCBWay to control the trace widths within 10% instead of 20%, which also helps to decrease tolerance errors.
 
@@ -599,11 +522,11 @@ I would like to thank my DSO mentor Ms Huang Ying Ying and my NUS supervisor Mr 
 
 # **9\. Appendix** {#9.-appendix}
 
-### **Appendix A: Detailed Performance Metric Definitions**
+### **Appendix A: Detailed Performance Metric Definitions** {#appendix-a:-detailed-performance-metric-definitions}
 
 **S11 (Return Loss)** is the ratio of reflected voltage to source voltage. A lower S11 is desired because a small S11 value indicates that a significant amount of energy has been successfully delivered to the antenna rather than being reflected back to the source due to a mismatch (Ezurio, n.d.). Ideally, the antenna and source impedance should match at the standard 50 Ohms. The standard is to ensure \>90% power transmission, corresponding to S11 ≤−10 dB (Verwilligen, 2015\) in the operational range of 13.93-13.99 GHz.
 
-![][image26]
+![][image30]
 
 Figure 2\. S11 (dB) vs Frequency
 
@@ -622,16 +545,6 @@ The patch antenna consists of a conducting patch layered on top of a dielectric 
 Figure 3\. Basic rectangular patch antenna \[6\]
 
 To achieve circular polarisation, the antenna must simultaneously excite two orthogonal resonant modes (e.g., the TM10 and TM01 modes) with equal amplitude and a 90-degree phase difference (Helit Team, n.d.; Orban & Moernaut, 2005).
-
-Appendix x: List of HFSS design file names
-
-| Section | File name |
-| :---- | :---- |
-| [4.3 Prototype 1: Optimising single patch](#4.1-prototype-1:-optimising-single-patch) |  |
-| [4.2 Prototype 2: Optimising 2x2 array (circular\_array\_3)](#4.2-prototype-2:-optimising-2x2-array) | circular\_array\_3 |
-|  |  |
-
-Table 9: List of HFSS Design File Names
 
 [image1]: {{site.baseurl}}/Assets/images/fig/1.png
 [image2]: {{site.baseurl}}/Assets/images/fig/2.png
