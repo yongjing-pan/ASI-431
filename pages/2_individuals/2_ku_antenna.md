@@ -75,19 +75,19 @@ has_toc: false
 
 [**8\. Appendix 22**](#9--appendix) 
 
-# **1\.  Introduction**  {#1.-introduction}
+# **1\.  Introduction** 
 
 This project focuses on developing a custom space-based Ku-band antenna for the Galassia 5 (G5)’s unique requirements.
 
-## **1.2  Problem Statement** {#1.2-problem-statement}
+## **1.2  Problem Statement**
 
 As mentioned in the introduction to G5, the team discovered that there is no existing commercial space-qualified Ku-band communication hardware meeting our frequency requirements (13.93-13.99 GHz). The space-based Ku antenna is one crucial part of the system that together with the Ku-band upconverter and ground station, form the custom-designed communication link from the satellite to the ground station. Specifically, the antenna serves to amplify and transmit signals from the satellite to the ground station. Hence, there is a need to develop a custom Ku antenna meeting the G5 mission requirements.
 
-## **1.3  Objectives and Scope** {#1.3-objectives-and-scope}
+## **1.3  Objectives and Scope**
 
 To design, prototype and test an antenna operating in the required frequency range of 13.93-13.99GHz for space-based application. 
 
-## **1.4 Specifications and Constraints** {#1.4-specifications-and-constraints}
+## **1.4 Specifications and Constraints**
 
 * Frequency range: 13.93-13.99 GHz   
 * Central frequency: 13.95 GHz  
@@ -101,11 +101,11 @@ The central frequency, gain and beamwidth were set by the team lead-cum-system e
 
 Figure 1\. Maximum boundary of radiating element (assuming rectangular boundary)
 
-## **1.5 Novelty and Contributions** {#1.5-novelty-and-contributions}
+## **1.5 Novelty and Contributions**
 
 As mentioned in G5’s introduction, existing communication systems do not operate in the narrow, specific frequency range of 13.93-13.99 GHz. The design of a custom Ku antenna to meet our mission’s requirements hence addresses this gap in existing commercially-available space-based Ku-band antennae.
 
-# **2\. Background and Literature Review**  {#2.-background-and-literature-review}
+# **2\. Background and Literature Review**
 
 To implement communications within the physical limits of a CubeSat, planar antennas \- such as microstrip patches and slots \- are an optimal choice due to their low profile, low cost, and ease of integration with microwave circuits (Tubbal et al., 2015). Unlike deployable reflector or helical antennas, planar antennas do not require complex deployment mechanisms and occupy significantly less real estate on the satellite body (Tubbal et al., 2015). These properties make them uniquely suited to meet the tight sub-4.6mm thickness constraints of the G5 mission.
 
@@ -113,19 +113,19 @@ Despite their physical suitability, creating highly miniaturised planar antennas
 
 To compensate for the low gain of miniaturized elements, multiple microstrip patches are typically combined to form an array.   
 
-# **3\. Design Methodology** {#3.-design-methodology}
+# **3\. Design Methodology**
 
-## **3.1 Antenna Design Process** {#3.1-antenna-design-process}
+## **3.1 Antenna Design Process**
 
 To meet mission deliverables, a systematic methodology was employed: requirement definition, EM simulation, prototyping, and testing. A simulation-first approach was adopted using ANSYS HFSS to identify flaws before manufacturing. The Finite Element Method (FEM) was selected over MoM or FDTD due to its superior flexibility in modelling complex 3D structures and multi-port setups (MacroFab, n.d.;Intrasensors, 2024). 
 
-## **3.2 Key Antenna Performance Metrics** {#3.2-key-antenna-performance-metrics}
+## **3.2 Key Antenna Performance Metrics**
 
 The antenna's performance is primarily characterised by **S11** (Return Loss), where a value of \-10 dB ensures that over 90% of source energy is successfully delivered to the patches within the 13.93-13.99 GHz operational range (Verwilligen, 2015). To maintain link stability against Faraday rotation and CubeSat misalignment, the design utilises **Right-Hand Circular Polarisation (RHCP)** (Tubbal et al., 2021). The design prioritises **Realised RHCP Gain** ($\\ge10$ dBi), as this metric accounts for internal dielectric losses, impedance mismatch, and polarisation mismatch (Zvolensky, 2022). For this report, ***“gain”*** *will always refer to **realised RHCP gain.*** Coverage requirements are further defined by the **Half-Power Beamwidth (HPBW)**, which necessitates a gain of \-7 dBi at \+-12 degrees. Finally, the **Axial Ratio (AR)** is maintained below 3 dB to ensure high-quality polarisation purity and to minimise energy waste through unwanted cross-polarisation (Abulgasem et al., 2021). For detailed explanations of the metrics, see Appendix x.
 
-## **3.3 Selection of planar antenna type**  {#3.3-selection-of-planar-antenna-type}
+## **3.3 Selection of planar antenna type**
 
-### **3.3.1 Concept evaluation matrix** {#3.3.1-concept-evaluation-matrix}
+### **3.3.1 Concept evaluation matrix**
 
 In various CubeSat antennae review papers, the most common types of planar antennae were patch antennae, followed by slot antennae and metasurface antennae (Gurbet & Doğu, 2025; Tubbal et al., 2015). A total of 4 factors were considered for selection of the best design:
 
@@ -146,7 +146,7 @@ Using the evaluation matrix, patch antenna scores highest out of all factors con
 
 In contrast, slot antennas and metasurface antennas are less commonly used in space systems. Achieving circular polarisation with slot antennas typically requires more complex geometries, while metasurfaces heavily rely on full-wave simulations \[5\] for beam steering and polarisation control. Furthermore, manufacturing metasurface antennas can be highly complex as it requires intricate sub-wavelength patterning and strict fabrication tolerances (Saeidi & Karamzadeh, 2025). 
 
-### **3.3.2 Mitigating the Disadvantages of Patch Antenna** {#3.3.2-mitigating-the-disadvantages-of-patch-antenna}
+### **3.3.2 Mitigating the Disadvantages of Patch Antenna**
 
 **Limited Gain:** A single patch antenna generally has limited gain (Mohamadzade et al., 2020). However, this can be mitigated at high frequencies such as the Ku-band, where individual patch elements are physically small, enabling the creation of high-gain arrays without exceeding size constraints.
 
@@ -154,7 +154,7 @@ In contrast, slot antennas and metasurface antennas are less commonly used in sp
 
 **Mutual Coupling**: When grouping multiple patches to form a high-gain array, the close proximity of the elements introduces mutual coupling, which can lower antenna efficiency, cause impedance mismatching, and distort the radiation pattern (Li et al., 2018). This will be mitigated by ensuring adequate electrical spacing between the elements and optimising the feed network. 
 
-### **3.3.3. Preliminary feasibility calculations**  {#3.3.3.-preliminary-feasibility-calculations}
+### **3.3.3. Preliminary feasibility calculations**
 
 The calculations for patch geometry require us to first select the dielectric substrate, r as this affects the guided wavelength g which determines the patch size. Considering standard PCB manufacturing for ease of fabrication, air substrate will not be considered, thus the minimum value is taken to be 1.96 of the Rogers RT/duroid 5880LZ substrate (Coonrod, 2010), giving us an upper limit of 15.35mm for g.
 
@@ -162,7 +162,7 @@ For conventional patch geometries, their fundamental dimensions are primarily di
 
 One patch can achieve \~3-4 dBi of gain. By doubling the number of elements three times (each doubling theoretically increases gain by 3 dBi), a gain of \~12 dBi can be achieved with a 2x4 array. In the array, maintaining a separation of half a wavelength (\~7.67 mm) between each element is recommended to prevent severe mutual coupling and grating lobes (Minz, Kang, & Park, 2020). Considering the required electrical separation from surrounding metal to avoid detuning, the antenna must be placed \~6.5 mm away from metallic mounting screws (Li et al., 2018). Including the electrical separation, the boundary is at 69.45x69.45mm, leaving 20mm of space for the mounting screws which is more than enough. Hence, a microstrip patch array easily fits within the physical constraints of the CubeSat, making it a highly viable solution for our specifications. 
 
-## **3.4 Selection of type of circularly-polarised patch antenna** {#3.4-selection-of-type-of-circularly-polarised-patch-antenna}
+## **3.4 Selection of type of circularly-polarised patch antenna**
 
 A basic patch requires a patch layer, substrate, and ground plane (see Appendix x for details).
 
@@ -189,7 +189,7 @@ Being made of linearly polarised parts, the circular probe-fed patch array is lo
 
 Figure 5\. Circularly-Polarised Patch Array Concepts: (left) Sequentially rotated array of circular patches from CST Design Suite and (right) AR of n-element arrays (Kuhlmann, 2023\)
 
-## **3.4 PCB Stackup Design** {#3.4-pcb-stackup-design}
+## **3.4 PCB Stackup Design**
 
 As mentioned in 3.4.1, a basic patch antenna consists of a patch layer, substrate and ground plane. As the circular patches are probe-fed (Fig. x), as compared to Fig. x, the feed is a via going through the substrate to contact the patch (Sowmya et al., 2012). For a singular patch, such a design (Fig. x) would be sufficient.   
 ![][image4]  
@@ -200,7 +200,7 @@ However, to create the 2x2 array, we need to excite each of 4 patches at 90 degr
 
 The next step is to select the substrate material and heights, as these would affect the patch size and feed network trace widths.
 
-### **3.5.1 Upper substrate & Substrate material** {#3.5.1-upper-substrate-&-substrate-material}
+### **3.5.1 Upper substrate & Substrate material**
 
    
 ![][image6]  
@@ -214,15 +214,15 @@ Rogers RO4350B (r \= 3.66) was assessed against RT/duroid 5880 (r \= 2.2). Whils
 
 Considering all these factors \- balancing bandwidth requirements, size constraints, and the crucial need for mechanical rigidity \- a substrate height of 0.762 mm and Rogers 4350B were selected, a decision also endorsed by my mentor.
 
-### **3.5.2 Lower substrate height** {#3.5.2-lower-substrate-height}
+### **3.5.2 Lower substrate height**
 
 For the lower substrate height h2, this will be similar to h to reduce PCB warping, as unequal dielectric thicknesses can induce mechanical stress during lamination, leading to severe board deformation (Adrian, 2025; Cadence PCB Education, 2025). h2 will affect the trace widths of the feed network. The feed network will consist of 50 Ohm, 70.7 Ohm quarter-wave transformers and possibly lower impedances, due to the need to split the power source to 4 feeds or more. Due to the small area of the patches, the feed positions will also be close together, which means the feed network would need to be compact and thus the trace widths cannot be too wide, as it would lead to field leakage and coupling to neighbouring traces or feed points. The widths must also not be too small to introduce large manufacturing tolerance errors. Thus, h2 will be further tuned after more simulation.
 
-# **4\.  Prototype Development**  {#4.-prototype-development}
+# **4\.  Prototype Development**
 
 Antenna prototypes are developed via iterative simulations in HFSS, where each component e.g. patch, subarray, feed section are individually simulated, then combined to a bigger component and simulated again. Key metrics (3.1) are evaluated for each simulation, then modifications or parameter tunings are done to optimise the metrics further. 
 
-## **4.1 Prototype 1: Optimising single patch**  {#4.1-prototype-1:-optimising-single-patch}
+## **4.1 Prototype 1: Optimising single patch**
 
 This prototype aims to optimise S11 for a single patch. This helps create a good foundation for the overall S11 as many factors such as substrate permittivity variations, fabrication tolerances, and connector soldering can create impedance shifts leading to power reflection. To achieve good matching, the patch radius Rp and feed position Sf  (Fig x) were tuned.  
    
@@ -240,7 +240,7 @@ Figure 6\. Performance of single patch (Prototype 1): a) Patch geometry, b) S11,
 Table 3: Single Patch Optimization Metrics (Prototype 1\)  
 A very high axial ratio of 14 dB is observed, as expected, as this single patch is linearly polarised.
 
-## **4.2 Prototype 2: Optimising 2x2 array** {#4.2-prototype-2:-optimising-2x2-array}
+## **4.2 Prototype 2: Optimising 2x2 array**
 
 This prototype forms a 2x2 array of the optimised single patch. As mentioned, the feeds are excited at different phases: from top left, clockwise at 0, 90, 180, 270 deg (Kuhlmann, 2023). The expected gain is 5.43 \+ 6 \= 11.43 dBi.   
 ![][image8] 
@@ -260,7 +260,7 @@ The gain of 10.74 dBi is slightly lower than the theoretical 11.43 dBi. This is 
 
 Validating Kuhlmann’s theory, the sequentially rotated array, through 90-degree phase and physical rotations, achieves a lowered axial ratio of 0.96 dB, a very pure circular polarisation below the \<3 dB threshold (Kuhlmann, 2023).
 
-## **4.3 Prototype 3: Order of sequential rotation investigation**  {#4.3-prototype-3:-order-of-sequential-rotation-investigation}
+## **4.3 Prototype 3: Order of sequential rotation investigation**
 
 This prototype aims to investigate how the spatial order of sequential rotation affects the key antenna metrics. This investigation was done firstly because it was noted that in the reversed spatial order, the feed points are more symmetrical, perhaps making the feed network design easier. Secondly, it was to see if an alternative spatial order could further optimise the key metrics.
 
@@ -280,7 +280,7 @@ Figure 9\. Performance comparison of different sequential rotation orders: a) S1
 Table 5: Comparison of Sequential Rotation Orientations (Prototype 3\)  
 The new orientation sees improvements in S11 and AR but worse gain. The better S11 is likely because when feed points are closer, the mutual impedance between feeds (vias) modifies the self-impedance of each patch, which in this case moves the impedance seen at each feed point closer to 50 Ohm (Mohammadian, Martin, & Griffin, 1989; Wang et al., 2010). However, mutual coupling also leads to worse radiation performance (gain). The improved AR is likely due to enhanced symmetry \[Sequential Rotation of Antenna Array Elements Rotation Angle for Optimum Array Polarization Karsten Kuhlmann\] of the ‘square’ over ‘diamond’ configuration. Due to improvements in S11 and AR, and minor loss in gain, this new orientation was chosen over the previous one.
 
-## **4.4 Prototype 4: 2x4 Array Simulation**  {#4.4-prototype-4:-2x4-array-simulation}
+## **4.4 Prototype 4: 2x4 Array Simulation**
 
 In the previous prototypes, the 2x2 arrays achieved gains of 10.74 dBi and 10.23 dBi respectively. This just meets our 10 dBi gain requirements. However, it is better to have a margin of 50% above 10 dB to account for losses from the feed network and manufacturing tolerances. Thus a safe target gain would be \~11.8 dBi. Hence, the 2x2 array was doubled to a 2x4 array, theoretically increasing gain from \~10 to \~13 dBi.   
 ![][image11]   
@@ -297,7 +297,7 @@ Table 6: 2x4 Array Simulation Metrics (Prototype 4\)
 
 The S11 and AR still satisfy our requirements very well. However, the radiation pattern is no longer similar from all orientations as the array is rectangular instead of square. The narrowest beamwidth taken at the phi=90 deg cut still satisfies our HPBW requirements as gain at \+- 12 degrees is above 7 dBi. 
 
-## **4.5 Concept Selection: Feed network design**  {#4.5-concept-selection:-feed-network-design}
+## **4.5 Concept Selection: Feed network design**
 
 ![][image12]
 
@@ -318,9 +318,9 @@ As seen in Table x, in order to get a smaller maximum width, the minimum width w
 
 Thus, the feed network will use the T-junctions and 90-degree bends.
 
-## **4.6 Prototype 5: Feed network** {#4.6-prototype-5:-feed-network}
+## **4.6 Prototype 5: Feed network**
 
-### **4.6.1 Microstrip and T-junction simulations** {#4.6.1-microstrip-and-t-junction-simulations}
+### **4.6.1 Microstrip and T-junction simulations**
 
 ![][image16]  
 Figure 12\. Typical microstrip feed network  
@@ -334,7 +334,7 @@ Then, since there is limited space between the patch feed points, I hypothesised
 
 Figure 13\. T-Junction Optimisation: (left) S11 comparison for T-junction without 100 Ohm line, (right) Mitered bends for T-junction to reduce losses
 
-### **4.6.2 Design of Feeds with 90-degree Phase Shifts** {#4.6.2-design-of-feeds-with-90-degree-phase-shifts}
+### **4.6.2 Design of Feeds with 90-degree Phase Shifts**
 
 The previously calculated quarter wavelength is the difference in feed length for each patch. Using this, the feeds for each patch are laid out with the appropriate lengths. It was hypothesised that even though some of the traces get closer than the 3-times width separation, that it occurred infrequently enough for the losses to be insignificant. After design, the phase shifts, S11, transmission coefficients (Sx1 representing S21 to S51, where 2-5 are the feed points while 1 is the source) and gain are evaluated.  
 ![][image18]
